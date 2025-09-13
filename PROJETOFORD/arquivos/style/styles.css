@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
   list-style: none;
   font-family: "poppins", sans-serif;
 }
@@ -39,6 +38,7 @@ header {
 
   & li {
     cursor: pointer;
+    
   }
 
   & img {
@@ -48,7 +48,9 @@ header {
 
   & nav {
     & ul {
-      display: grid;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 50px ;
       grid-template-columns: repeat(3, 200px);
     }
   }
