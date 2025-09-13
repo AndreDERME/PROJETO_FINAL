@@ -231,3 +231,26 @@
    position: relative;
 
  }
+
+section {
+    
+        & .list{
+
+            & .item{
+                transform: translateX(100vw);
+                transition: 0.5s;
+
+                & .car-img{
+                    & img {
+                        transform: rotate(0);
+                        transition: 0.5s;
+                        transition-delay: 0.3s;
+
+                    }
+                }
+                & .content{
+
+                }
+            }
+        }
+}
