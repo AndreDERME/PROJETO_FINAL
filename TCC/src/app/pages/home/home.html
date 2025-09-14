@@ -1,124 +1,57 @@
+<div class="main">
+  <header class="senhor_conteiner">
+    <img src="assets/ford-96.png" id="logo-ford" />
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li>Carros</li>
+        <li>Serviços</li>
+        <li>Fale conosco</li>
+        <li>Entrar</li>
+      </ul>
+    </nav>
+  </header>
 
-<!DOCTYPE html>
-<html lang="pt-bt">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=League+Gothic&display=swap"
-      rel="stylesheet"
-    />
-    
-    <title>FORD</title>
-  </head>
-  <body>
-   <div class="main">
-    <header class="senhor_conteiner">
-      <img src="/TCC/img/ford-96.png" id="logo-ford" />
-      <nav>
-        <ul>
-          <li>Home</li>
-          <li>Carros</li>
-          <li>Serviços</li>
-          <li>Fale conosco</li>
-          <li>Entrar</li>
-        </ul>
-      </nav>
-    </header>
-
-    <section>
-      <div class="list">
-
-        <div class="item active">
-          <div class="car-img">
-            <img src="/TCC/img/pngwing.com.png" alt="imagem carro" />
-          </div>
-          <div class="content">
-            <p class="car-inform">2016</p>
-            <h2 class="nome_car">EcoSport</h2>
-            <p class="descrição">
-              O Ford EcoSport é um SUV compacto, conhecido por seu porte pequeno e design versátil.
-              Ele oferece diversas opções de motorização, incluindo versões 1.5 e 2.0, com câmbio manual ou automático,
-              e opções de tração dianteira ou integral.
-            </p>
-            <button class="information">Saiba mais</button>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="car-img">
-            <img src="/TCC/img/pngegg (1).png" alt="imagem carro" />
-          </div>
-          <div class="content">
-            <p class="car-inform">2010</p>
-            <h2 class="nome_car">FOCUS</h2>
-            <p class="descrição">
-              O Ford Focus MK2, especialmente a sua reestilização MK2.5 lançada no Brasil em 2008, 
-              é um carro conhecido pela boa dirigibilidade, 
-              robustez e um pacote de equipamentos de destaque, principalmente nas versões mais completas como a Titanium. 
-              Oferecido com os motores Duratec 2.0 a gasolina (e depois Flex) e o Sigma 1.6 Flex.
-            </p>
-            <button class="information">Saiba mais</button>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="car-img">
-            <img src="/TCC/img/Ford-PNG-Background-Image.png" alt="imagem carro" />
-          </div>
-          <div class="content">
-            <p class="car-inform">2016</p>
-            <h2 class="nome_car">FIESTA SEDAN</h2>
-            <p class="descrição">
-              O Ford Fiesta Sedan 2016, ou New Fiesta Sedan 2016, é elogiado pelo bom desempenho do motor 1.6 16V flex, conforto e praticidade. 
-              A linha 2016 trouxe novidades como a versão SE Plus com mais airbags, 
-              central multimídia MyFord Touch com tela de 6,5” e câmera de ré nas versões mais caras.
-            </p>
-            <button class="information">Saiba mais</button>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="arrow">
-        <button>
-          <img src="/TCC/img/arrow.png" alt="esquerda" />
-        </button>
-        <button>
-          <img src="/TCC/img/arrow.png" alt="direita" />
-        </button>
-      </div>
-
-      <div class="indicator">
-        <div class="number">01</div>
-        <ul>
-          <li class="active"></li>
-          <li></li>
-          <li></li>
-        </ul>
-      </div>
-    </section>
+  <section>
    
-    </div>
-    
+    <div class="list">
 
-    <footer class="rodape_site">
-      <span class="letra">Redes Sociais</span>
-      <a href="https://www.facebook.com/FordBrasil/?locale=pt_BR"
-        ><img src="/TCC/img/facebook-50.png" id="logo_abaixo" class="logo_prim" alt="img_face"
-      /></a>
-      <a href="https://www.instagram.com/fordbrasil/"
-        ><img src="/TCC/img/instagram-logo-50.png" id="logo_abaixo" class="logo_segun" alt="img_insta"
-      /></a>
-      <a href="https://www.youtube.com/fordbrasil"
-        ><img src="/TCC/img/youtube-squared-50.png" id="logo_abaixo" class="logo_terc" alt="img_tube"
-      /></a>
-      <div class="copy">
-        <p>&copy; 2025 Ford Motor Company; todos os direitos estão reservados</p>
+      <!--  TODOS os carros se movem aq -->
+      <div class="trilho" [style.transform]="'translateX(-' + carroAtualIndex * 100 + '%)'">
+
+
+        <div class="item" *ngFor="let carro of carros">
+          <div class="car-img">
+            <img [src]="carro.imagem" alt="Imagem do {{ carro.nome }}" />
+          </div>
+          <div class="content">
+            <p class="car-inform">{{ carro.ano }}</p>
+            <h2 class="nome_car">{{ carro.nome }}</h2>
+            <p class="descrição">{{ carro.descricao }}</p>
+            <button class="information">Saiba mais</button>
+          </div>
+        </div>
+
       </div>
-    </footer>
-  </body>
-</html>
+    </div>
 
+    <div class="arrow">
+      <button (click)="carroAnterior()">
+        <img src="assets/arrow.png" alt="esquerda" />
+      </button>
+      <button (click)="proximoCarro()">
+        <img src="assets/arrow.png" alt="direita" />
+      </button>
+    </div>
+
+   
+    <div class="indicator">
+      <div class="number">01</div>
+      <ul>
+        <li class="active"></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+  </section>
+</div>
