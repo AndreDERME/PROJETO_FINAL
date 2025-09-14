@@ -1,8 +1,4 @@
-/* =================================================================
-   CSS FINAL LIMPO E FUNCIONAL
-   ================================================================= */
 
-/* --- ESTILOS GLOBAIS --- */
 * {
   margin: 0;
   padding: 0;
@@ -26,7 +22,7 @@ body {
   flex: 1;
 }
 
-/* --- HEADER --- */
+
 header {
   position: absolute;
   top: 30px;
@@ -45,20 +41,19 @@ header li { cursor: pointer; }
 header img { width: 180px; margin-bottom: 20px; }
 header nav ul { display: flex; justify-content: space-between; margin-right: 50px; }
 
-/* --- SLIDER SECTION --- */
 section {
   position: relative;
   height: 100vh;
   background: radial-gradient(#0093ff, #00a8f3);
 }
 
-/* Janela do slider */
+
 section .list {
   position: relative;
   margin: auto;
   width: 70vw;
   height: 100%;
-  overflow: hidden; /* esconde slides fora da janela */
+  overflow: hidden; 
 }
 
 section .list::before {
@@ -70,7 +65,7 @@ section .list::before {
   border-top: 1px solid #fff;
 }
 
-/* Trilho dos slides */
+
 section .list .trilho {
   display: flex;
   width: 100%;
@@ -79,7 +74,6 @@ section .list .trilho {
  transform: translateX(100vw);
 }
 
-/* Slide individual */
 section .list .item {
   position: relative;
   flex: 0 0 100%;
@@ -87,7 +81,7 @@ section .list .item {
   height: 100%;
 }
 
-/* Conteúdo do slide */
+
 section .list .item .car-img {
   position: absolute;
   top: 50%;
@@ -141,7 +135,7 @@ section .list .item .content .information {
   font-family: "League Gothic", sans-serif;
 }
 
-/* --- SETAS E INDICADORES --- */
+
 section .arrow {
   position: absolute;
   top: 50%;
@@ -170,7 +164,7 @@ section .arrow button img {
 section .arrow button:nth-child(1) img { transform: scaleX(-1); }
 section .arrow button:hover { background: rgba(14, 235, 168, 0.9); }
 
-/* Indicadores */
+
 section .indicator {
   position: absolute;
   top: 50%;
