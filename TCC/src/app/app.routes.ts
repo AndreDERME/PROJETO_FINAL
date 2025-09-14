@@ -6,7 +6,7 @@ export const routes: Routes = [
         pathMatch: "full",
         loadComponent:() => {
             return import ("./pages/home/home")
-            .then (c => c.Home)
+            .then (c => c.HomeComponent)
             
         }
     },
@@ -20,6 +20,39 @@ export const routes: Routes = [
             
         }
     },
+
+     {
+        path: "carros",
+        pathMatch: "full",
+        loadComponent:() => {
+            return import ("./pages/carros/carros")
+            .then (c => c.Carros)
+            
+        }
+    },
+
+     {
+        path: "contato",
+        pathMatch: "full",
+        loadComponent:() => {
+            return import ("./pages/contato/contato")
+            .then (c => c.Contato)
+            
+        }
+    },
+      {
+        path: "servicos",
+        pathMatch: "full",
+        loadComponent:() => {
+            return import ("./pages/servicos/servicos")
+            .then (c => c.Servicos)
+            
+        }
+    },
+
+
+           
+
 
     
 
