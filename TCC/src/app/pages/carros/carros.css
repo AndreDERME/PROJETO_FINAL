@@ -47,8 +47,9 @@ header nav ul { display: flex; justify-content: space-between; margin-right: 50p
   grid-template-columns: repeat(3, 1fr); /* sempre 3 por linha */
   gap: 2rem;
   padding: 2rem;
-  max-width: 1700px;
+  max-width: 1300px;
   margin: 0 auto;
+  margin-top: 100px;
 }
 
 .card {
@@ -115,3 +116,20 @@ header nav ul { display: flex; justify-content: space-between; margin-right: 50p
     transform: translateY(0);
   }
 }
+
+ .carrinho {
+    display: block;
+    text-align: center;
+    margin: auto;
+    max-width: 80%;
+    margin-top: 50px;
+ }
+
+  .carrinho2{
+     display: block;
+    text-align: center;
+    margin: auto;
+    max-width: 100%;
+    margin-top: 80px;
+
+  }
