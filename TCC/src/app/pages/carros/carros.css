@@ -26,6 +26,7 @@ main {
 
 header {
   position: absolute;
+
   top: 30px;
   left: 50%;
   transform: translateX(-50%);
@@ -49,7 +50,7 @@ header nav ul { display: flex; justify-content: space-between; margin-right: 50p
   padding: 2rem;
   max-width: 1300px;
   margin: 0 auto;
-  margin-top: 100px;
+  margin-top: 150px;
 }
 
 .card {
@@ -121,15 +122,59 @@ header nav ul { display: flex; justify-content: space-between; margin-right: 50p
     display: block;
     text-align: center;
     margin: auto;
-    max-width: 80%;
-    margin-top: 50px;
+    max-width: 100%;
+    margin-top: 80px;
  }
 
   .carrinho2{
      display: block;
     text-align: center;
     margin: auto;
-    max-width: 100%;
+    max-width: 80%;
+    margin-top: 50px;
+
+  }
+  
+  .carrinho3{
+     display: block;
+    text-align: center;
+    margin: auto;
     margin-top: 80px;
 
   }
+
+  .carrinho4 {
+    margin-top: 30px;
+ }
+
+ .carrinho5 {
+    display: block;
+    text-align: center;
+    margin: auto;
+    max-width: 100%;
+    margin-top: 85px;
+ }
+ .carrinho6{
+  max-width: 90%;
+ }
+ .carrinhoka{
+  margin-top: 10px;
+ }
+
+
+ .sedan{
+  margin-top: 35px;
+ }
+
+ .eco{
+  margin-top: 15px;
+
+}
+
+ h1{
+  display: block;
+  text-align: center;
+  margin: auto;
+  margin-top: 200px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
