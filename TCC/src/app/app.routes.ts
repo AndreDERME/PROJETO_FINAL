@@ -50,6 +50,16 @@ export const routes: Routes = [
         }
     },
 
+    {
+        path: "model-focus",
+        pathMatch: "full",
+        loadComponent:() => {
+            return import ("./pages/model-focus/model-focus")
+            .then (c => c.ModelFocus)
+            
+        }
+    },
+
 
            
 
