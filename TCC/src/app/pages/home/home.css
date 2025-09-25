@@ -43,7 +43,7 @@ header nav ul { display: flex; justify-content: space-between; margin-right: 50p
 
 section {
   position: relative;
-  height: 100vh;
+  height: 120vh;
   background: radial-gradient(#0093ff, #00a8f3);
 }
 
@@ -201,4 +201,101 @@ section .indicator li.active { background: white; }
 section .list .item.active .content {
   opacity: 1;
   transform: translateY(0);
+}
+
+
+main{
+  
+  background: radial-gradient(#0093ff, #00a8f3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+
+
+ 
+ .quem-somos {
+  margin-top: 60px;
+  max-width: 1000px;
+  width: 90%;
+  padding: 40px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quem-somos-conteudo {
+  display: flex;
+  flex-wrap: wrap; 
+  align-items: center;
+  gap: 30px;
+  justify-content: center;
+}
+
+.quem-somos-texto {
+  flex: 1 1 400px;
+  text-align: left;
+}
+
+.quem-somos-texto h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.quem-somos-texto p {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  color: #f0f0f0;
+}
+
+.quem-somos-imagem {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.quem-somos-imagem img {
+  max-width: 300px;
+  border-radius: 10px;
+}
+.localizacao {
+  background: radial-gradient(#0093ff, #00a8f3);
+  text-align: center;
+  padding: 60px 20px;
+  color: white;
+}
+
+.localizacao h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.localizacao .loc {
+  width: 30px;
+  height: 30px;
+}
+
+.localizacao-texto {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+.map-container {
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
 }
