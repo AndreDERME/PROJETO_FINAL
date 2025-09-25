@@ -50,6 +50,17 @@ export const routes: Routes = [
         }
     },
 
+    {
+        path: "",
+        pathMatch: "full",
+        loadComponent:() => {
+            return import ("./pages/servicos/servicos")
+            .then (c => c.Servicos)
+            
+        }
+    },
+
+
 
            
 
