@@ -51,27 +51,14 @@ export const routes: Routes = [
     },
 
     {
-<<<<<<< HEAD
-        path: "",
-        pathMatch: "full",
-        loadComponent:() => {
-            return import ("./pages/servicos/servicos")
-            .then (c => c.Servicos)
-=======
+
         path: "model-focus",
         pathMatch: "full",
         loadComponent:() => {
             return import ("./pages/model-focus/model-focus")
-            .then (c => c.ModelFocus)
->>>>>>> 28ac72ad1b5a605b1439b7d578cf65d33f7d7444
-            
+            .then (c => c.ModelFocus)           
         }
     },
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 28ac72ad1b5a605b1439b7d578cf65d33f7d7444
 
            
 
