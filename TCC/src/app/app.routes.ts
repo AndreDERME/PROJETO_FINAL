@@ -60,6 +60,16 @@ export const routes: Routes = [
         }
     },
 
+
+      {
+
+        path: "model-eco",
+        pathMatch: "full",
+        loadComponent:() => {
+            return import ("./pages/model-eco/model-eco")
+            .then (c => c.ModelEco)           
+        }
+    },
            
 
 
