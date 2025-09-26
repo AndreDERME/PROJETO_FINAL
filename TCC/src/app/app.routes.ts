@@ -81,6 +81,26 @@ export const routes: Routes = [
         }
     },
 
+    {
+
+        path: "model-ford-ka",
+        pathMatch: "full",
+        loadComponent:() => {
+            return import ("./pages/model-ford-ka/model-ford-ka")
+            .then (c => c.ModelFordKa)           
+        }
+    },
+    {
+
+        path: "model-fusion",
+        pathMatch: "full",
+        loadComponent:() => {
+            return import ("./pages/model-fusion/model-fusion")
+            .then (c => c.ModelFusion)           
+        }
+    },
+
+
 
     
 
