@@ -19,7 +19,7 @@ import { Fordcourier } from './pages/fordcourier/fordcourier';
 
 export const routes: Routes = [
     {
-        path: "home",
+        path: "",
        component: HomeComponent,
 
     },
