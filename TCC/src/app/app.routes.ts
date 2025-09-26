@@ -1,103 +1,75 @@
 import { Routes } from '@angular/router';
+import { HomeComponent } from './pages/home/home';
+import { Login } from './pages/login/login';
+import { Carros } from './pages/carros/carros';
+import { Contato } from './pages/contato/contato';
+import { Servicos } from './pages/servicos/servicos';
+import { ModelFocus } from './pages/model-focus/model-focus';
+import { ModelEco } from './pages/model-eco/model-eco';
+import { ModelFeista } from './pages/model-feista/model-feista';
+import { ModelFordKa } from './pages/model-ford-ka/model-ford-ka';
+import { ModelFusion } from './pages/model-fusion/model-fusion';
+import { ModelGt } from './pages/model-gt/model-gt';
 
 export const routes: Routes = [
     {
-        path: "",
-        pathMatch: "full",
-        loadComponent:() => {
-            return import ("./pages/home/home")
-            .then (c => c.HomeComponent)
-            
-        }
+        path: "home",
+       component: HomeComponent,
+
     },
 
        {
         path: "login",
-        pathMatch: "full",
-        loadComponent:() => {
-            return import ("./pages/login/login")
-            .then (c => c.Login)
-            
-        }
+        component: Login,
     },
 
      {
         path: "carros",
-        pathMatch: "full",
-        loadComponent:() => {
-            return import ("./pages/carros/carros")
-            .then (c => c.Carros)
-            
-        }
+        component:Carros,
     },
 
      {
         path: "contato",
-        pathMatch: "full",
-        loadComponent:() => {
-            return import ("./pages/contato/contato")
-            .then (c => c.Contato)
-            
-        }
+        component:Contato,
     },
       {
         path: "servicos",
-        pathMatch: "full",
-        loadComponent:() => {
-            return import ("./pages/servicos/servicos")
-            .then (c => c.Servicos)
-            
-        }
+        component: Servicos,
     },
 
     {
 
         path: "model-focus",
-        pathMatch: "full",
-        loadComponent:() => {
-            return import ("./pages/model-focus/model-focus")
-            .then (c => c.ModelFocus)           
-        }
+        component:ModelFocus,
     },
 
 
       {
 
         path: "model-eco",
-        pathMatch: "full",
-        loadComponent:() => {
-            return import ("./pages/model-eco/model-eco")
-            .then (c => c.ModelEco)           
-        }
+        component: ModelEco,
     },
         
      {
 
         path: "model-feista",
-        pathMatch: "full",
-        loadComponent:() => {
-            return import ("./pages/model-feista/model-feista")
-            .then (c => c.ModelFeista)           
-        }
+        component:ModelFeista,
     },
 
     {
 
         path: "model-ford-ka",
-        pathMatch: "full",
-        loadComponent:() => {
-            return import ("./pages/model-ford-ka/model-ford-ka")
-            .then (c => c.ModelFordKa)           
-        }
+        component:ModelFordKa,
     },
     {
 
         path: "model-fusion",
-        pathMatch: "full",
-        loadComponent:() => {
-            return import ("./pages/model-fusion/model-fusion")
-            .then (c => c.ModelFusion)           
-        }
+        component:ModelFusion,
+    },
+
+    {
+        path: "model-gt",
+        component:ModelGt,
     },
 
 
