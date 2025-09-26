@@ -70,7 +70,16 @@ export const routes: Routes = [
             .then (c => c.ModelEco)           
         }
     },
-           
+        
+     {
+
+        path: "model-feista",
+        pathMatch: "full",
+        loadComponent:() => {
+            return import ("./pages/model-feista/model-feista")
+            .then (c => c.ModelFeista)           
+        }
+    },
 
 
     
