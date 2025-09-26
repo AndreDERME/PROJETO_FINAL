@@ -25,8 +25,8 @@ body {
 
 header {
   position: absolute;
-  top: 30px;
-  left: 50%;
+  background: rgb(12, 149, 228);
+  left: 945px;
   transform: translateX(-50%);
   display: grid;
   grid-template-columns: 1fr 600px;
@@ -34,12 +34,15 @@ header {
   width: 100%;
   max-width: 100%;
   z-index: 3;
-  box-shadow: 0 6px 5px rgba(245, 245, 245, 0.9);
+  box-shadow: 0 4px 3px rgba(245, 245, 245, 0.288);
+  padding: 10px;
+  
+ 
 }
 
-header li { cursor: pointer; }
-header img { width: 180px; margin-bottom: 20px; }
-header nav ul { display: flex; justify-content: space-between; margin-right: 50px; }
+header li { cursor: pointer; color: #dee0e2;  }
+header img { width: 180px; margin-top: 8px; margin-left: 20px; }
+header nav ul { display: flex; justify-content: space-between; margin-right: 50px; margin-top: 20px; }
 
 section {
   position: relative;
@@ -196,7 +199,7 @@ section .indicator li {
   transition: 0.5s;
 }
 
-section .indicator li.active { background: white; }
+section .indicator li.active { background:#beff1b }
 
 section .list .item.active .content {
   opacity: 1;
@@ -219,8 +222,7 @@ main{
  
  .quem-somos {
   margin-top: 60px;
-  max-width: 1000px;
-  width: 90%;
+  width: 100%;
   padding: 40px 20px;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 15px;
@@ -267,10 +269,13 @@ main{
   border-radius: 10px;
 }
 .localizacao {
-  background: radial-gradient(#0093ff, #00a8f3);
+ 
   text-align: center;
   padding: 60px 20px;
   color: white;
+  width: 100%;
+  height: 100vh;
+
 }
 
 .localizacao h1 {
