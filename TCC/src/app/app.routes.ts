@@ -10,6 +10,12 @@ import { ModelFeista } from './pages/model-feista/model-feista';
 import { ModelFordKa } from './pages/model-ford-ka/model-ford-ka';
 import { ModelFusion } from './pages/model-fusion/model-fusion';
 import { ModelGt } from './pages/model-gt/model-gt';
+import { ModelTaunus } from './pages/model-taunus/model-taunus';
+import { ModelMustang } from './pages/model-mustang/model-mustang';
+import { Ford150XL } from './pages/ford150-xl/ford150-xl';
+import { Ford150 } from './pages/ford150/ford150';
+import { ModelEdge } from './pages/model-edge/model-edge';
+import { Fordcourier } from './pages/fordcourier/fordcourier';
 
 export const routes: Routes = [
     {
@@ -71,8 +77,36 @@ export const routes: Routes = [
         path: "model-gt",
         component:ModelGt,
     },
+    
+    {
+        path: "model-taunus",
+        component:ModelTaunus,
+    },
 
+    {
+        path: "model-mustang",
+        component:ModelMustang,
+    },
 
+    {
+        path: "ford150-xl",
+        component: Ford150XL,
+    },
+
+    {
+        path: "ford150",
+        component: Ford150,
+    },
+
+    {
+        path: "model-edge",
+        component:ModelEdge,
+    },
+
+    {
+        path: "fordcourier",
+        component: Fordcourier,
+    },
 
     
 
