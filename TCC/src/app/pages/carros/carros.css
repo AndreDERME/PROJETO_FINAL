@@ -24,6 +24,7 @@ main {
 
 }
 
+
 header {
   position: absolute;
   background: rgb(12, 149, 228);
@@ -41,7 +42,7 @@ header {
  
 }
 
-header li { cursor: pointer; color: white;  }
+header li { cursor: pointer; color: #dee0e2;  }
 header img { width: 180px; margin-top: 8px; margin-left: 20px; }
 header nav ul { display: flex; justify-content: space-between; margin-right: 50px; margin-top: 20px; }
 
