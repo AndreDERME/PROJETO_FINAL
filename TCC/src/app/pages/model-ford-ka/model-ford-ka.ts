@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { Header } from "../base/header/header";
 
 @Component({
   selector: 'app-model-ford-ka',
-  imports: [],
+  imports: [Header],
   templateUrl: './model-ford-ka.html',
   styleUrl: './model-ford-ka.css'
 })
