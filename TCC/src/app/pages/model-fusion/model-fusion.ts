@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { Header } from '../base/header/header';
+
 
 @Component({
   selector: 'app-model-fusion',
-  imports: [Header],
+  imports: [],
   templateUrl: './model-fusion.html',
   styleUrl: './model-fusion.css'
 })
