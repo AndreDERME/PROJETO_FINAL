@@ -16,6 +16,7 @@ import { Ford150XL } from './pages/ford150-xl/ford150-xl';
 import { Ford150 } from './pages/ford150/ford150';
 import { ModelEdge } from './pages/model-edge/model-edge';
 import { Fordcourier } from './pages/fordcourier/fordcourier';
+import { Financiamento } from './pages/servicos/financiamento/financiamento';
 
 export const routes: Routes = [
     {
@@ -107,6 +108,13 @@ export const routes: Routes = [
         path: "fordcourier",
         component: Fordcourier,
     },
+
+    {
+        path:"financiamento",
+        component:Financiamento,
+
+    },
+    
 
     
 
