@@ -1,9 +1,48 @@
-.rodape_site {
-  background-image: radial-gradient(#00bfff, #1e90ff);
-  gap: 10px;
+.ford-footer {
+  font-size: 0.95rem;
   display: flex;
-  align-items: center;
-  max-width: 100%;
-  padding: 10px;
-  position: relative;
+  flex-direction: column;
+  min-height: 40vh;
 }
+
+.footer-logo {
+  max-width: 120px;
+}
+
+.ford-footer a:hover {
+  color: #045cb9;
+  transition:ease-in-out 0.3s;
+}
+
+.ford-footer i {
+  font-size: 1.2rem;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+  padding: 8px;
+}
+
+.links,a{
+ padding-top: 0px;
+}
+
+.facebook:hover img {
+  transform: scale(1.1); 
+  transition:ease-in-out 0.3s;
+}
+.instagram:hover img {
+  transform: scale(1.1); 
+  transition:ease-in-out 0.3s;
+}
+.twitter:hover img {
+  transform: scale(1.1); 
+  transition:ease-in-out 0.3s;
+}
+.youtube:hover img {
+  transform: scale(1.1); 
+  transition:ease-in-out 0.3s;
+  
+}
+
