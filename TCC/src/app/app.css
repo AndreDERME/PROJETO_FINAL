@@ -1,57 +1,52 @@
+
 .rodape_site {
   background: radial-gradient(#0093ff, #00a8f3);
   padding: 30px 20px;
   text-align: center;
   border-top: 2px solid #ccc;
   font-family: Arial, sans-serif;
+  color: #fff; 
 }
 
-.titulo_footer {
-  display: block;
-  font-size: 1.4rem;
+
+
+.redes-sociais-container {
+  display: flex;             
+  justify-content: center;   
+  align-items: center;       
+  gap: 5px;                 
+  margin-bottom: 25px;      
+}
+
+
+.redes-sociais-container .letra {
+  font-size: 1.2rem;
   font-weight: bold;
-  margin-bottom: 16px;
-  color: #003b6f; /* azul Ford */
-  text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
-.social_icons {
-  display: flex;
-  justify-content: center;
-  gap: 18px;
-  margin-bottom: 20px;
+
+.redes-sociais-container a img {
+  width: 35px; 
+  height: 35px;
+  vertical-align: middle; 
+  margin: 0 5px; 
 }
 
-.social_icons img {
-  width: 42px;
-  height: 42px;
-  border-radius: 10px;
-  padding: 6px;
-  background: #fff;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
 
-.social_icons img:hover {
-  transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
-}
 
 .info_contato {
-  margin: 20px 0;
-  font-size: 0.95rem;
-  color: #333;
-  line-height: 1.6;
+ margin: 20px 0;
+ font-size: 0.95rem;
+ line-height: 1.6;
 }
 
 .info_contato p {
-  margin: 6px 0;
+ margin: 6px 0;
 }
 
 .copy {
   font-size: 0.9rem;
   color: #444;
-  border-top: 1px solid rgba(0,0,0,0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
   padding-top: 12px;
 }

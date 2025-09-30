@@ -25,29 +25,6 @@ main {
 }
 
 
-header {
-  position: absolute;
-  background: rgb(12, 149, 228);
-  left: 945px;
-  transform: translateX(-50%);
-  display: grid;
-  grid-template-columns: 1fr 600px;
-  gap: 10px;
-  width: 100%;
-  max-width: 100%;
-  z-index: 3;
-  box-shadow: 0 4px 3px rgba(245, 245, 245, 0.288);
-  padding: 10px;
-  
- 
-}
-
-header li { cursor: pointer; color: #dee0e2;  }
-header img { width: 180px; margin-top: 8px; margin-left: 20px; }
-header nav ul { display: flex; justify-content: space-between; margin-right: 50px; margin-top: 20px; }
-
-
-
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* sempre 3 por linha */
@@ -111,7 +88,7 @@ header nav ul { display: flex; justify-content: space-between; margin-right: 50p
   transform: scale(1.05);
 }
 
-/* animação para entrada mais profissional */
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -184,3 +161,7 @@ header nav ul { display: flex; justify-content: space-between; margin-right: 50p
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+a{
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.774);
+}
