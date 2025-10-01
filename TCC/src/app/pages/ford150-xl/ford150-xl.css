@@ -1,8 +1,9 @@
 h1{
-  background: radial-gradient(#0093ff, #00a8f3);
+
   display: flex;
   justify-content: center;
   align-items: center;
+  background: #1A2221;
   
 
 }
@@ -41,22 +42,24 @@ section {
   }
   
   .info {
-    margin-top: 100px;
+    background: #1A2221;
+    color: #F0EFEA;
+    margin-top: 20px;
     padding: 20px;
     border-radius: 10px;
     max-width: 100%;
     width: 100%;
-   box-shadow: 0 4px 10px rgb(29, 26, 26);
+    box-shadow: 0 4px 10px rgb(29, 26, 26);
 
   }
   
   .info h2 {
-    color:rgba(0, 0, 0, 0.685);
+   color:rgba(0, 0, 0, 0.685);
     margin-bottom: 15px;
   }
   
   .info p {
-    color: aqua;
+    color: rgba(0, 255, 255, 0.781);
     margin: 5px 0;
     font-size: 16px;
   }
