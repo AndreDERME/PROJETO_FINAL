@@ -138,6 +138,26 @@ section .list .item .content .information {
   font-family: "League Gothic", sans-serif;
 }
 
+.information {
+  display: inline-flex; /* mantém alinhamento do texto */
+  justify-content: center;
+  align-items: center;
+  width: 100%;          /* ocupa toda a largura do container */
+  height: 100%;         /* ocupa toda a altura do container */
+  min-width: 120px;     /* mantém tamanho mínimo */
+  min-height: 35px;     /* mantém altura mínima */
+  border: 2px solid #5c14a3;
+  border-radius: 30px;
+  background: #beff1b;
+  color: black;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "League Gothic", sans-serif;
+  cursor: pointer;
+  position: relative;
+  z-index: 5;           /* garante que fique acima de outros elementos */
+  text-decoration: none; /* remove sublinhado do <a> */
+}
 
 section .arrow {
   position: absolute;

@@ -17,7 +17,7 @@
             <p class="car-inform">{{ carro.ano }}</p>
             <h2 class="nome_car">{{ carro.nome }}</h2>
             <p class="descrição">{{ carro.descricao }}</p>
-            <button class="information">Saiba mais</button>
+          <a class="information" [routerLink]="getLinkParaCarro(carro.nome)">Saiba mais</a>
           </div>
         </div>
 

@@ -1,16 +1,18 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Header } from "../base/header/header";
+import { RouterLink } from '@angular/router';
 
 
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, Header], 
+  imports: [CommonModule, Header, RouterLink], 
   templateUrl: './home.html',
   styleUrls: ['./home.css']
 })
+
 export class HomeComponent {
 
   carros = [
@@ -49,6 +51,19 @@ export class HomeComponent {
       this.carroAtualIndex = this.carros.length - 1;
     } else {
       this.carroAtualIndex--;
+    }
+  }
+    getLinkParaCarro(nome: string): string {
+    switch (nome.toUpperCase()) {
+      case 'ECOSPORT':
+        return '/model-eco';
+      case 'FIESTA SEDAN':
+
+        return '/model-feista'; 
+      case 'FOCUS':
+        return '/model-focus';
+      default:
+        return '/';
     }
   }
 }
