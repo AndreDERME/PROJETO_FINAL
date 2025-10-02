@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { Header } from "../../base/header/header";
 
 @Component({
   selector: 'app-consorcio',
-  imports: [],
+  imports: [Header],
   templateUrl: './consorcio.html',
   styleUrl: './consorcio.css'
 })

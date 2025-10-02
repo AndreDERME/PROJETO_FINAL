@@ -139,13 +139,13 @@ section .list .item .content .information {
 }
 
 .information {
-  display: inline-flex; /* mantém alinhamento do texto */
+  display: inline-flex; 
   justify-content: center;
   align-items: center;
-  width: 100%;          /* ocupa toda a largura do container */
-  height: 100%;         /* ocupa toda a altura do container */
-  min-width: 120px;     /* mantém tamanho mínimo */
-  min-height: 35px;     /* mantém altura mínima */
+  width: 100%;          
+  height: 100%;         
+  min-width: 120px;     
+  min-height: 35px;    
   border: 2px solid #5c14a3;
   border-radius: 30px;
   background: #beff1b;
@@ -155,8 +155,8 @@ section .list .item .content .information {
   font-family: "League Gothic", sans-serif;
   cursor: pointer;
   position: relative;
-  z-index: 5;           /* garante que fique acima de outros elementos */
-  text-decoration: none; /* remove sublinhado do <a> */
+  z-index: 5;          
+  text-decoration: none; 
 }
 
 section .arrow {
