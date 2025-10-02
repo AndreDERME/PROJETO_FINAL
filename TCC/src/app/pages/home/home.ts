@@ -53,17 +53,5 @@ export class HomeComponent {
       this.carroAtualIndex--;
     }
   }
-    getLinkParaCarro(nome: string): string {
-    switch (nome.toUpperCase()) {
-      case 'ECOSPORT':
-        return '/model-eco';
-      case 'FIESTA SEDAN':
 
-        return '/model-feista'; 
-      case 'FOCUS':
-        return '/model-focus';
-      default:
-        return '/';
-    }
-  }
 }
