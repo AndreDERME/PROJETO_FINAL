@@ -20,7 +20,7 @@ body {
 
 main {
   padding: 2rem;
-   background: radial-gradient(#0093ff, #00a8f3);
+  background: radial-gradient(#0d5385, #0d5385);
 
 }
 
@@ -164,4 +164,194 @@ main {
 a{
   text-decoration: none;
   color: rgba(0, 0, 0, 0.774);
+}
+
+@media screen and (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 1.5rem;
+    margin-top: 100px;
+  }
+  
+  h1 {
+    font-size: 2.2rem;
+    margin-top: 150px;
+  }
+  
+  main {
+    padding: 1.5rem;
+  }
+  
+  .card:hover {
+    transform: scale(1.03);
+  }
+  
+  .card h2 {
+    font-size: 1.3rem;
+  }
+  
+  .card .preco {
+    font-size: 1rem;
+  }
+}
+
+/* Tablets pequenos e celulares grandes (481px - 768px) */
+@media screen and (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+    margin-top: 80px;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+    margin-top: 100px;
+  }
+  
+  main {
+    padding: 1rem;
+  }
+  
+  .card {
+    border-radius: 12px;
+  }
+  
+  .card h2 {
+    font-size: 1.2rem;
+    margin: 0.8rem 0 0.4rem;
+  }
+  
+  .card .preco {
+    font-size: 0.95rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .card button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  /* Ajustes específicos para imagens em tablets */
+  .carrinho, .carrinho2, .carrinho3, .carrinho5 {
+    margin-top: 40px;
+  }
+  
+  .carrinho4, .carrinhoka, .sedan, .eco {
+    margin-top: 20px;
+  }
+}
+
+/* Celulares - Telas pequenas (até 480px) */
+@media screen and (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0.8rem;
+    margin-top: 60px;
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+    margin-top: 80px;
+    padding: 0 1rem;
+  }
+  
+  main {
+    padding: 0.8rem;
+  }
+  
+  .card {
+    border-radius: 10px;
+    max-width: 100%;
+  }
+  
+  .card:hover {
+    transform: scale(1.02);
+  }
+  
+  .card h2 {
+    font-size: 1.1rem;
+    margin: 0.6rem 0 0.3rem;
+  }
+  
+  .card .preco {
+    font-size: 0.9rem;
+    margin-bottom: 0.6rem;
+  }
+  
+  .card button {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Resetar margens específicas para celulares */
+  .carrinho, .carrinho2, .carrinho3, .carrinho4, .carrinho5, .carrinho6,
+  .carrinhoka, .sedan, .eco {
+    margin-top: 0;
+    max-width: 100%;
+  }
+}
+
+/* Celulares muito pequenos (até 320px) */
+@media screen and (max-width: 320px) {
+  h1 {
+    font-size: 1.3rem;
+    margin-top: 60px;
+  }
+  
+  .grid {
+    margin-top: 40px;
+    padding: 0.5rem;
+  }
+  
+  main {
+    padding: 0.5rem;
+  }
+  
+  .card h2 {
+    font-size: 1rem;
+  }
+  
+  .card .preco {
+    font-size: 0.85rem;
+  }
+  
+  .card button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* Melhorias para acessibilidade e usabilidade */
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    animation: none;
+    transform: none;
+    opacity: 1;
+  }
+  
+  .card:hover {
+    transform: none;
+  }
+  
+  .card button:hover {
+    transform: none;
+  }
+}
+
+/* Ajustes para orientação landscape em dispositivos móveis */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  h1 {
+    margin-top: 40px;
+    font-size: 1.8rem;
+  }
+  
+  .grid {
+    margin-top: 20px;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
