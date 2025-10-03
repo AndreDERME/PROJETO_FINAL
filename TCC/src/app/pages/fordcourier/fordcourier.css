@@ -9,7 +9,7 @@ h1{
 }
 
 section {
-  background: radial-gradient(#0093ff, #00a8f3);
+  background: radial-gradient(#0d5385, #0d5385);
   min-height: 94vh; 
   display: flex;
   justify-content: center; 
