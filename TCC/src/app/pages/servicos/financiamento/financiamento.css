@@ -4,12 +4,11 @@ img {
 
 }
 
-
 .financiamento-container {
-  background: radial-gradient(#0093ff, #00a8f3);
+  background: radial-gradient(#0d5385, #0d5385);
   color: #fff;
   padding: 40px 20px;
-  margin-top: 100px;
+  margin-top: 80px;
 }
 
 .hero {
