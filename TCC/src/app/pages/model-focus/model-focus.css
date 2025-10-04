@@ -83,6 +83,13 @@ section {
   }
   
 
+@media (max-width: 600px) {
+  .section_class{
+    margin-top: 160px;
+    
+  }
+}
+
 @media (min-width: 768px) {
   h1 {
     font-size: 2rem;
@@ -90,7 +97,7 @@ section {
 
   .iframe-container {
     height: 400px;
-    max-width: 80%;
+    max-width: 90%;
   }
 
   .info {
