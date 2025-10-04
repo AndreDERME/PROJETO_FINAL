@@ -1,0 +1,33 @@
+.login-container {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center;    /* Centraliza verticalmente */
+  height: 100vh;          /* 100% da altura da viewport */
+  background-color: #f0f2f5; /* Um fundo cinza claro para contraste */
+}
+
+/* Estilo do card de login */
+.login-card {
+  width: 100%;
+  max-width: 400px; /* Largura máxima para não ficar muito grande em telas maiores */
+  padding: 20px;
+}
+
+/* Classe para fazer os elementos ocuparem a largura total */
+.full-width {
+  width: 100%;
+  margin-bottom: 15px; /* Espaçamento entre os campos */
+}
+
+/* Estilo para a mensagem de erro do login */
+.login-error-message {
+  color: #f44336; /* Cor vermelha para erros */
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 0.9em;
+}
+
+/* Garante que o botão de login ocupe a largura total */
+button.full-width {
+  margin-top: 10px;
+}
