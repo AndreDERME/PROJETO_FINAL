@@ -113,3 +113,61 @@ img {
 .zap-btn:hover {
   background: #1ebe5d;       
 }
+
+/* Telas até 1024px (tablets grandes) */
+@media (max-width: 1024px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+   .hero img {
+    display: none;
+  }
+}
+
+/* Telas até 768px (tablets pequenos e celulares grandes) */
+@media (max-width: 768px) {
+  .lead {
+    font-size: 16px;
+  }
+
+  .btn-primary {
+    width: 100%;
+    padding: 14px;
+  }
+
+  .info-grid, .beneficios-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* 🚫 esconde imagem do carro */
+  .hero img {
+    display: none;
+  }
+}
+
+/* Telas até 480px (celulares pequenos) */
+@media (max-width: 480px) {
+  .financiamento-container {
+    padding: 20px 15px;
+  }
+
+  .hero {
+    gap: 20px;
+  }
+
+  .faq {
+    padding: 0 10px;
+  }
+
+  .zap-btn {
+    width: 100%;
+    padding: 14px;
+  }
+
+  /* 🚫 também garante que a imagem some */
+  .hero img {
+    display: none;
+  }
+}
