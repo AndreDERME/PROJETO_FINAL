@@ -81,4 +81,38 @@ section {
   .zap-btn:hover {
     background: #1ebe5b;
   }
-  
+
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .iframe-container {
+    height: 400px;
+    max-width: 80%;
+  }
+
+  .info {
+    max-width: 80%;
+    font-size: 1rem;
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .car-container {
+    flex-direction: row; 
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .iframe-container {
+    max-width: 50%;
+    height: 500px;
+  }
+
+  .info {
+    max-width: 40%;
+  }
+}
