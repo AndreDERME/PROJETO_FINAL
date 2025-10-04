@@ -81,6 +81,13 @@ section {
   .zap-btn:hover {
     background: #1ebe5b;
   }
+  @media (max-width: 600px) {
+  .section_class{
+    margin-top: 160px;
+    
+  }
+}
+
   
 
 
