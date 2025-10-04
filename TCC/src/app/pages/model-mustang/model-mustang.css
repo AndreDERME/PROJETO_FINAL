@@ -100,6 +100,12 @@ section {
   }
 }
 
+@media (max-width: 600px) {
+  .section_class{
+    margin-top: 160px;
+    
+  }
+}
 
 @media (min-width: 1024px) {
   .car-container {
