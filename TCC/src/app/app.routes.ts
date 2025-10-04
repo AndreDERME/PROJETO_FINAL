@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home';
-import { Login } from './pages/login/login';
+import { LoginComponent } from './pages/login/login'; // ALTERADO: O nome correto do componente é LoginComponent
 import { Carros } from './pages/carros/carros';
 import { Contato } from './pages/contato/contato';
 import { Servicos } from './pages/servicos/servicos';
@@ -22,25 +22,25 @@ import { Consorcio } from './pages/servicos/consorcio/consorcio';
 export const routes: Routes = [
     {
         path: "",
-       component: HomeComponent,
+        component: HomeComponent,
 
+    },
+
+        {
+        path: "login",
+        component: LoginComponent, 
     },
 
        {
-        path: "login",
-        component: Login,
-    },
-
-     {
         path: "carros",
         component:Carros,
     },
 
-     {
+       {
         path: "contato",
         component:Contato,
     },
-      {
+       {
         path: "servicos",
         component: Servicos,
     },
@@ -52,13 +52,13 @@ export const routes: Routes = [
     },
 
 
-      {
+       {
 
         path: "model-eco",
         component: ModelEco,
     },
         
-     {
+       {
 
         path: "model-feista",
         component:ModelFeista,
@@ -121,7 +121,6 @@ export const routes: Routes = [
         component:Consorcio,
     },
     
-
     
 
     
