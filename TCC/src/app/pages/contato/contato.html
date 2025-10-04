@@ -1,1 +1,72 @@
-<p>contato works!</p>
+<app-header></app-header>
+
+
+<section class="contact-section">
+  <div class="contact-container">
+
+    <!-- Cabeçalho -->
+    <div class="contact-header">
+      <h1>Entre em Contato</h1>
+      <p>Tem alguma dúvida ou deseja mais informações? Preencha o formulário ou fale conosco diretamente.</p>
+    </div>
+
+    <div class="contact-content">
+      <!-- Lado esquerdo: informações -->
+      <div class="contact-info">
+        <h2>Informações</h2>
+        <p><span class="icon">📍</span> Av. Central, 123 - Salvador, BA</p>
+        <p><span class="icon">📞</span> (71) 9 9999-9999</p>
+        <p><span class="icon">✉️</span> contato@empresa.com</p>
+
+        <a href="https://wa.me/5571999999999" target="_blank" class="zap-btn">
+          💬 Falar no WhatsApp
+        </a>
+
+        <!-- Horários -->
+        <div class="schedule">
+          <h3>Horário de Atendimento</h3>
+          <p>Seg - Sex: 08h - 18h</p>
+          <p>Sábado: 08h - 12h</p>
+          <p>Domingos e feriados: fechado</p>
+        </div>
+
+        <!-- Missão e Valores -->
+        <div class="mission">
+          <h3>Nossa Missão</h3>
+          <p>Oferecer atendimento de qualidade e soluções rápidas, garantindo confiança e eficiência.</p>
+
+          <h3>Nossos Valores</h3>
+          <ul>
+            <li>✅ Compromisso com o cliente</li>
+            <li>✅ Transparência</li>
+            <li>✅ Inovação constante</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Lado direito: formulário -->
+      <form class="contact-form">
+        <h2>Formulário</h2>
+
+        <div class="form-group">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" placeholder="Digite seu nome" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" placeholder="Digite seu e-mail" required>
+        </div>
+
+        <div class="form-group">
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" rows="5" placeholder="Digite sua mensagem" required></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">
+          📩 Enviar Mensagem
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
