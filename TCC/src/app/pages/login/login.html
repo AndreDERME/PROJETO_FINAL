@@ -1,48 +1,101 @@
-<div class="login-container">
-  <mat-card class="login-card">
-    <mat-card-header>
-      <mat-card-title>Login</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-        
-        <!-- Campo de Email -->
-        <mat-form-field appearance="outline" class="full-width">
-          <mat-label>Email</mat-label>
-          <input matInput formControlName="email" placeholder="exemplo@email.com" type="email">
-          <mat-error *ngIf="f['email'].touched && f['email'].hasError('required')">
-            O email é obrigatório.
-          </mat-error>
-          <mat-error *ngIf="f['email'].touched && f['email'].hasError('email')">
-            Por favor, insira um email válido.
-          </mat-error>
-        </mat-form-field>
-        
-        <!-- Campo de Senha -->
-        <mat-form-field appearance="outline" class="full-width">
-          <mat-label>Senha</mat-label>
-          <input matInput formControlName="password" [type]="hide ? 'password' : 'text'">
-          <button mat-icon-button matSuffix (click)="hide = !hide" type="button" [disabled]="isLoading">
-            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-          </button>
-          <mat-error *ngIf="f['password'].touched && f['password'].hasError('required')">
-            A senha é obrigatória.
-          </mat-error>
-        </mat-form-field>
-
-        <!-- Mensagem de erro geral -->
-        <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
-
-        <!-- Botão de Acesso -->
-        <div class="button-container">
-          <button mat-raised-button color="primary" class="full-width" type="submit" [disabled]="loginForm.invalid || isLoading">
-            <span *ngIf="!isLoading">Entrar</span>
-            <mat-spinner *ngIf="isLoading" [diameter]="24"></mat-spinner>
-          </button>
+<div class="login-page">
+  <div class="login-container">
+    
+    <!-- Lado esquerdo - Branding -->
+    <div class="login-left">
+      <div class="branding">
+        <h1 class="brand-title">Ford Company</h1>
+        <p class="brand-subtitle">Sua concessionária de confiança</p>
+        <div class="brand-features">
+          <div class="feature-item">
+            <span class="feature-icon">🚗</span>
+            <span>Veículos de Qualidade</span>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">🛡️</span>
+            <span>Garantia Completa</span>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">💰</span>
+            <span>Melhores Condições</span>
+          </div>
         </div>
+      </div>
+    </div>
 
-      </form>
-    </mat-card-content>
-  </mat-card>
+    <!-- Lado direito - Formulário -->
+    <div class="login-right">
+      <div class="login-form-container">
+        <h2 class="form-title">Acesse sua Conta</h2>
+        <p class="form-subtitle">Entre com suas credenciais para continuar</p>
+
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
+          
+          <!-- Campo de Email -->
+          <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <input 
+              type="email" 
+              id="email" 
+              formControlName="email" 
+              class="form-input"
+              placeholder="seu@email.com"
+              [class.error]="f['email'].touched && f['email'].invalid"
+            />
+            <span class="error-message" *ngIf="f['email'].touched && f['email'].hasError('required')">
+              O email é obrigatório
+            </span>
+            <span class="error-message" *ngIf="f['email'].touched && f['email'].hasError('email')">
+              Digite um email válido
+            </span>
+          </div>
+
+          <!-- Campo de Senha -->
+          <div class="form-group">
+            <label for="password" class="form-label">Senha</label>
+            <div class="password-wrapper">
+              <input 
+                [type]="hide ? 'password' : 'text'" 
+                id="password" 
+                formControlName="password" 
+                class="form-input"
+                placeholder="••••••••"
+                [class.error]="f['password'].touched && f['password'].invalid"
+              />
+              <button type="button" class="toggle-password" (click)="hide = !hide" [disabled]="isLoading">
+                <span *ngIf="hide">👁️</span>
+                <span *ngIf="!hide">🙈</span>
+              </button>
+            </div>
+            <span class="error-message" *ngIf="f['password'].touched && f['password'].hasError('required')">
+              A senha é obrigatória
+            </span>
+          </div>
+
+          <!-- Mensagem de erro geral -->
+          <div class="alert-error" *ngIf="errorMessage">
+            {{ errorMessage }}
+          </div>
+
+          <!-- Botão de Login -->
+          <button 
+            type="submit" 
+            class="btn-login" 
+            [disabled]="loginForm.invalid || isLoading"
+            [class.loading]="isLoading"
+          >
+            <span *ngIf="!isLoading">Entrar</span>
+            <span *ngIf="isLoading" class="spinner"></span>
+          </button>
+
+          <!-- Links auxiliares -->
+          <div class="form-footer">
+            <a href="#" class="link-secondary">Esqueceu sua senha?</a>
+          </div>
+
+        </form>
+      </div>
+    </div>
+
+  </div>
 </div>
-

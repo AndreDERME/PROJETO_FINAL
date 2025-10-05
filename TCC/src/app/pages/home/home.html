@@ -7,7 +7,7 @@
     <div class="hero-content">
       <h1 class="hero-title">Encontre o Carro dos Seus Sonhos</h1>
       <p class="hero-subtitle">Veículos selecionados com a melhor condição e procedência</p>
-      <a href="#carousel" class="hero-btn">Ver Estoque Agora</a>
+      <a routerLink="/carros" class="hero-btn">Ver Estoque Agora</a>
     </div>
   </section>
 
@@ -46,6 +46,7 @@
     </div>
   </section>
 
+ 
 
   <!-- CARROS EM DESTAQUE -->
   <section class="featured-cars" id="destaques">
@@ -70,7 +71,7 @@
           <p class="car-description">{{ carro.descricao }}</p>
           <div class="car-footer">
             <span class="car-price">R$ {{ carro.preco || '45.900' }}</span>
-            <button class="car-btn">Ver Detalhes</button>
+            <a [routerLink]="carro.link" class="car-btn">Ver Detalhes</a>
           </div>
         </div>
       </div>

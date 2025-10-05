@@ -1,121 +1,405 @@
-body {
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.main {
+  background: linear-gradient(135deg, #0a0e27 0%, #1a2456 50%, #0d5385 100%);
   min-height: 100vh;
-  
-  
 }
 
-section {
-    padding: 40px 20px;
-    background: radial-gradient(#0d5385, #0d5385);
-  
+.consorcio-page {
+  padding-top: 100px;
 }
 
-.consorcio-container {
-  display: block;
-  margin: auto;
+/* ==================== HERO SECTION ==================== */
+.hero-section {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 100px 20px;
   text-align: center;
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-content {
   max-width: 900px;
-  color: white;
-  margin-top: 120px;
+  margin: 0 auto;
 }
 
-.consorcio-container h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
+.hero-title {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #beff1b;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
 
-.consorcio-container p {
+.hero-subtitle {
+  font-size: 1.4rem;
+  color: #d0d0d0;
+  margin-bottom: 40px;
+  line-height: 1.8;
+}
+
+.hero-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 50px;
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
   font-size: 1.2rem;
-  line-height: 1.6;
-  margin-bottom: 30px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  box-shadow: 0 15px 40px rgba(37, 211, 102, 0.4);
 }
 
-.info-box {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 20px;
-  border-radius: 8px;
-  margin-bottom: 20px;
-  text-align: left;
+.hero-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px rgba(37, 211, 102, 0.6);
 }
 
-.info-box h2 {
-  margin-bottom: 10px;
+.btn-icon {
   font-size: 1.5rem;
 }
 
-.info-box ul {
-  list-style: none;
-  padding: 0;
+/* ==================== SEÇÕES GERAIS ==================== */
+.info-section,
+.advantages-section,
+.how-it-works,
+.why-us-section {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 80px 20px;
 }
 
-.info-box li {
-  margin: 8px 0;
-  padding-left: 20px;
-  position: relative;
-}
-
-.info-box li::before {
-  content: '✔';
-  position: absolute;
-  left: 0;
-  color: #00ffcc;
-}
-
-.zap-btn {
-  display: inline-block;
-  background: #25d366;
-  color: white;
-  padding: 14px 24px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.zap-btn:hover {
-  background: #1ebe57;
-}
-
-.extra-section {
-  margin: 60px auto;
-  max-width: 1000px;
+.section-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #beff1b;
   text-align: center;
-  color: white;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
-.extra-section h2 {
-  font-size: 2rem;
-  margin-bottom: 30px;
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #d0d0d0;
+  text-align: center;
+  margin-bottom: 60px;
 }
 
-.cards {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
+.section-description {
+  font-size: 1.2rem;
+  color: #e0e0e0;
+  text-align: center;
+  line-height: 1.9;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.card {
-  background: rgba(255, 255, 255, 0.15);
-  padding: 20px;
-  border-radius: 10px;
-  width: 280px;
-  transition: transform 0.3s ease;
+/* ==================== INFO SECTION ==================== */
+.info-section {
+  background: rgba(0, 0, 0, 0.2);
 }
 
-.card:hover {
-  transform: translateY(-8px);
+/* ==================== VANTAGENS ==================== */
+.advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
 }
 
-.card h3 {
-  margin-bottom: 10px;
-  font-size: 1.4rem;
-  color: #00ffcc;
+.advantage-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px 30px;
+  border-radius: 20px;
+  border: 2px solid rgba(190, 255, 27, 0.2);
+  text-align: center;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(10px);
 }
 
-.card p {
+.advantage-card:hover {
+  transform: translateY(-10px);
+  border-color: #beff1b;
+  box-shadow: 0 20px 50px rgba(190, 255, 27, 0.2);
+}
+
+.advantage-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.advantage-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #beff1b;
+  margin-bottom: 15px;
+}
+
+.advantage-description {
   font-size: 1rem;
-  line-height: 1.5;
+  color: #d0d0d0;
+  line-height: 1.7;
+}
+
+/* ==================== COMO FUNCIONA ==================== */
+.how-it-works {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.steps-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 35px;
+  border-radius: 20px;
+  border: 2px solid rgba(190, 255, 27, 0.2);
+  transition: all 0.3s ease;
+}
+
+.step-item:hover {
+  border-color: #beff1b;
+  box-shadow: 0 10px 30px rgba(190, 255, 27, 0.2);
+  transform: translateX(10px);
+}
+
+.step-number {
+  width: 70px;
+  height: 70px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #beff1b, #0ea8a8);
+  border-radius: 50%;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0a0e27;
+}
+
+.step-content {
+  flex: 1;
+}
+
+.step-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.step-description {
+  font-size: 1rem;
+  color: #d0d0d0;
+  line-height: 1.7;
+}
+
+/* ==================== POR QUE ESCOLHER ==================== */
+.why-us-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.why-us-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px 30px;
+  border-radius: 20px;
+  border: 2px solid rgba(190, 255, 27, 0.2);
+  text-align: center;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(10px);
+}
+
+.why-us-card:hover {
+  transform: translateY(-10px);
+  border-color: #beff1b;
+  box-shadow: 0 20px 50px rgba(190, 255, 27, 0.2);
+}
+
+.why-us-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.why-us-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #beff1b;
+  margin-bottom: 15px;
+}
+
+.why-us-description {
+  font-size: 1rem;
+  color: #d0d0d0;
+  line-height: 1.7;
+}
+
+/* ==================== CTA FINAL ==================== */
+.cta-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.cta-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #beff1b;
+  margin-bottom: 20px;
+}
+
+.cta-subtitle {
+  font-size: 1.3rem;
+  color: #d0d0d0;
+  margin-bottom: 40px;
+  line-height: 1.7;
+}
+
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 50px;
+  background: linear-gradient(135deg, #beff1b, #0ea8a8);
+  color: #0a0e27;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  box-shadow: 0 15px 40px rgba(190, 255, 27, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cta-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px rgba(190, 255, 27, 0.6);
+}
+
+/* ==================== RESPONSIVIDADE ==================== */
+@media only screen and (max-width: 992px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .section-title {
+    font-size: 2.3rem;
+  }
+
+  .advantages-grid,
+  .why-us-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .consorcio-page {
+    padding-top: 80px;
+  }
+
+  .hero-section {
+    padding: 80px 20px;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-subtitle,
+  .section-description {
+    font-size: 1rem;
+  }
+
+  .advantages-grid,
+  .why-us-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .step-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .cta-title {
+    font-size: 2.3rem;
+  }
+
+  .cta-subtitle {
+    font-size: 1.1rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-btn,
+  .cta-btn {
+    padding: 15px 30px;
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .advantage-card,
+  .why-us-card,
+  .step-item {
+    padding: 25px 20px;
+  }
+
+  .cta-title {
+    font-size: 1.8rem;
+  }
 }
