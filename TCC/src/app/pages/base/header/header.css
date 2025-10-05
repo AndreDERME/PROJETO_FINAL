@@ -101,3 +101,20 @@ a{
     gap: 30px;
   }
 }
+
+
+/* Botão de Logout */
+.logout-btn {
+  background: linear-gradient(135deg, #ff4444, #cc0000) !important;
+  padding: 8px 20px !important;
+  border-radius: 25px !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+  display: inline-block !important;
+}
+
+.logout-btn:hover {
+  background: linear-gradient(135deg, #ff6666, #ff0000) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 5px 15px rgba(255, 68, 68, 0.4) !important;
+}

@@ -33,9 +33,7 @@ body {
   justify-content: center;
   overflow: hidden;
 }
-a{
-  text-decoration: none;
-}
+
 .hero-overlay {
   position: absolute;
   top: 0;
@@ -61,7 +59,7 @@ a{
   letter-spacing: 2px;
   background: linear-gradient(90deg, #ffffff, #beff1b);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgb(179, 192, 236);
+  -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
