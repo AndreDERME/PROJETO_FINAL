@@ -1,15 +1,22 @@
 <div class="main">
 <app-header></app-header>
 
-  <section>
-   
-    <div class="list">
+  <!-- BANNER PRINCIPAL -->
+  <section class="hero-banner">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">Encontre o Carro dos Seus Sonhos</h1>
+      <p class="hero-subtitle">Veículos selecionados com a melhor condição e procedência</p>
+      <a href="#carousel" class="hero-btn">Ver Estoque Agora</a>
+    </div>
+  </section>
 
+  <!-- CARROSSEL ORIGINAL -->
+  <section class="carousel-section" id="carousel">
+    <div class="list">
       <!--  TODOS os carros se movem aq -->
       <div class="trilho" [style.transform]="'translateX(-' + carroAtualIndex * 100 + '%)'">
-
-
-        <div class="item" *ngFor="let carro of carros">
+        <div class="item" *ngFor="let carro of carrosCarousel">
           <div class="car-img">
             <img [src]="carro.imagem" alt="Imagem do {{ carro.nome }}" />
           </div>
@@ -19,7 +26,6 @@
             <p class="descrição">{{ carro.descricao }}</p>
           </div>
         </div>
-
       </div>
     </div>
 
@@ -31,61 +37,164 @@
         <img src="assets/arrow.png" alt="direita" />
       </button>
     </div>
-
    
     <div class="indicator">
       <div class="number"></div>
       <ul>
-        <li class="active"></li>
-        <li></li>
-        <li></li>
+        <li *ngFor="let carro of carrosCarousel; let i = index" [class.active]="i === carroAtualIndex"></li>
       </ul>
     </div>
   </section>
 
-  <main>
-  
-   <section class="quem-somos">
-  <div class="quem-somos-conteudo">
-    <div class="quem-somos-texto">
-      <h1>QUEM SOMOS</h1>
-      <p>
-        Somos a Ford Company, uma concessionária apaixonada por carros e pela satisfação de nossos clientes. 
-        Oferecemos veículos de qualidade, com transparência, confiança e um atendimento 
-        que valoriza cada detalhe. Nosso compromisso é garantir que você encontre o carro 
-        dos seus sonhos com segurança e praticidade.
+  <!-- BARRA DE PESQUISA RÁPIDA -->
+  <section class="search-bar">
+    <div class="search-container">
+      <h2 class="search-title">Busca Rápida</h2>
+      <div class="search-filters">
+        <select class="search-input">
+          <option value="">Marca</option>
+          <option value="ford">Ford</option>
+          <option value="chevrolet">Chevrolet</option>
+          <option value="volkswagen">Volkswagen</option>
+          <option value="fiat">Fiat</option>
+        </select>
+        <select class="search-input">
+          <option value="">Modelo</option>
+          <option value="ecosport">EcoSport</option>
+          <option value="focus">Focus</option>
+          <option value="fiesta">Fiesta</option>
+        </select>
+        <select class="search-input">
+          <option value="">Ano</option>
+          <option value="2024">2024</option>
+          <option value="2023">2023</option>
+          <option value="2022">2022</option>
+          <option value="2021">2021</option>
+          <option value="2020">2020</option>
+        </select>
+        <button class="search-btn">Buscar</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CARROS EM DESTAQUE -->
+  <section class="featured-cars" id="destaques">
+    <div class="section-header">
+      <h2 class="section-title">Nossos Destaques</h2>
+      <p class="section-subtitle">Confira os veículos mais procurados do nosso estoque</p>
+    </div>
+
+    <div class="cars-grid">
+      <div class="car-card" *ngFor="let carro of carros">
+        <div class="car-card-image">
+          <img [src]="carro.imagem" [alt]="carro.nome" />
+          <div class="car-badge">Destaque</div>
+        </div>
+        <div class="car-card-content">
+          <h3 class="car-name">{{ carro.nome }}</h3>
+          <div class="car-details">
+            <span class="car-year">{{ carro.ano }}</span>
+            <span class="car-separator">•</span>
+            <span class="car-km">{{ carro.km || '50.000' }} km</span>
+          </div>
+          <p class="car-description">{{ carro.descricao }}</p>
+          <div class="car-footer">
+            <span class="car-price">R$ {{ carro.preco || '45.900' }}</span>
+            <button class="car-btn">Ver Detalhes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO QUEM SOMOS -->
+  <section class="quem-somos">
+    <div class="quem-somos-conteudo">
+      <div class="quem-somos-texto">
+        <h2 class="section-title">Quem Somos</h2>
+        <p>
+          Somos a <strong>Ford Company</strong>, uma concessionária apaixonada por carros e pela satisfação de nossos clientes. 
+          Oferecemos veículos de qualidade, com transparência, confiança e um atendimento 
+          que valoriza cada detalhe. Nosso compromisso é garantir que você encontre o carro 
+          dos seus sonhos com segurança e praticidade.
+        </p>
+        <p class="quem-somos-destaque">
+          Há mais de 10 anos no mercado, construímos nossa reputação com base na confiança e na excelência do atendimento.
+        </p>
+      </div>
+
+      <div class="quem-somos-imagem">
+        <img src="assets/vecteezy_business-people-talking-to-each-other-happy-ai-generated_28711820.png" alt="Equipe Ford Company">
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO SERVIÇOS -->
+  <section class="services">
+    <div class="section-header">
+      <h2 class="section-title">Nossos Serviços</h2>
+      <p class="section-subtitle">Muito além da venda de veículos</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="5" width="20" height="14" rx="2"/>
+            <line x1="2" y1="10" x2="22" y2="10"/>
+          </svg>
+        </div>
+        <h3 class="service-title">Financiamento</h3>
+        <p class="service-description">Financiamos em até 60x com as melhores taxas do mercado. Aprovação rápida e sem burocracia.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/>
+            <circle cx="7" cy="17" r="2"/>
+            <circle cx="17" cy="17" r="2"/>
+          </svg>
+        </div>
+        <h3 class="service-title">Aceitamos seu Usado</h3>
+        <p class="service-description">Avaliamos seu carro na troca. Processo transparente e justo para você sair com seu novo veículo.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <path d="m9 12 2 2 4-4"/>
+          </svg>
+        </div>
+        <h3 class="service-title">Garantia</h3>
+        <p class="service-description">Todos os nossos veículos possuem garantia de motor e câmbio. Sua segurança é nossa prioridade.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO LOCALIZAÇÃO -->
+  <section class="localizacao">
+    <div class="section-header">
+      <h2 class="section-title">
+        Nossa Localização 
+        <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" class="loc" alt="ícone localização">
+      </h2>
+      <p class="section-subtitle">
+        Estamos em um ponto de fácil acesso. Venha nos visitar e conhecer nosso showroom de veículos.
       </p>
     </div>
-
-    <div class="quem-somos-imagem">
-      <img src="assets/vecteezy_business-people-talking-to-each-other-happy-ai-generated_28711820.png" alt="Pessoas conversando">
-    </div>
-  </div>
-</section>
-
-  
-  <div class="localizacao">
-    <h1>
-      Nossa Localização 
-      <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" class="loc" alt="ícone localização">
-    </h1>
-
-    <p class="localizacao-texto">
-      Estamos em um ponto de fácil acesso, venha nos visitar e conhecer nosso showroom de veículos.
-    </p>
 
     <div class="map-container">
       <iframe 
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.514435960005!2d-46.65657168502208!3d-23.56168498468066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c92c5b1d05%3A0x7e58b16f6a0f7d2!2sAvenida%20Paulista!5e0!3m2!1spt-BR!2sbr!4v1699972222222!5m2!1spt-BR!2sbr" 
         width="100%" 
-        height="400" 
+        height="450" 
         style="border:0;" 
         allowfullscreen="" 
         loading="lazy">
       </iframe>
     </div>
-  </div>
-  
+  </section>
 
-  </main>
 </div>
