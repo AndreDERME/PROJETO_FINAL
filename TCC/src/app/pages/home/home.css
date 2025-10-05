@@ -59,7 +59,7 @@ body {
   letter-spacing: 2px;
   background: linear-gradient(90deg, #ffffff, #beff1b);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: #7097eb;
   background-clip: text;
 }
 
@@ -354,74 +354,6 @@ body {
   }
 }
 
-/* ==================== BARRA DE PESQUISA ==================== */
-.search-bar {
-  padding: 60px 20px;
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(10px);
-}
-
-.search-container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.search-title {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 30px;
-  color: #beff1b;
-}
-
-.search-filters {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.search-input {
-  flex: 1;
-  min-width: 200px;
-  padding: 15px 20px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 2px solid rgba(190, 255, 27, 0.3);
-  border-radius: 10px;
-  color: #ffffff;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-}
-
-.search-input:focus {
-  outline: none;
-  border-color: #beff1b;
-  background: rgba(255, 255, 255, 0.15);
-}
-
-.search-input option {
-  background: #0a0e27;
-  color: #ffffff;
-}
-
-.search-btn {
-  padding: 15px 40px;
-  background: linear-gradient(135deg, #beff1b, #0ea8a8);
-  color: #0a0e27;
-  border: none;
-  border-radius: 10px;
-  font-weight: 600;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.search-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(190, 255, 27, 0.4);
-}
 
 /* ==================== SEÇÕES GERAIS ==================== */
 .section-header {
