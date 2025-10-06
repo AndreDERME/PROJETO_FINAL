@@ -1,5 +1,5 @@
 header {
- 
+  position: fixed;
   background: rgba(12, 149, 228, 1);
   display: flex;
   justify-content: space-between;
@@ -100,22 +100,4 @@ a{
   header nav ul {
     gap: 30px;
   }
-}
-
-
-/* Botão de Logout */
-.logout-btn {
-  background: linear-gradient(135deg, #e77e05, #dd9848) !important;
-  padding: 8px 20px !important;
-  border-radius: 10px !important;
-  font-weight: 600 !important;
-  transition: all 0.3s ease !important;
-  display: inline-block !important;
- 
-}
-
-.logout-btn:hover {
-  background: linear-gradient(135deg, #e77e05, #dd9848) !important;
-  transform: translateY(-2px) !important;
-  box-shadow: 0 5px 15px rgba(255, 68, 68, 0.4) !important;
 }

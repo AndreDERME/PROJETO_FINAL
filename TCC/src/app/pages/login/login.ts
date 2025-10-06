@@ -1,15 +1,29 @@
+import { AuthService } from '../../services/auth';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+
+// Imports para Standalone Components
 import { CommonModule } from '@angular/common';
-import { AuthService } from '../../services/auth.service';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'; // Adicionado para o loading
 
 @Component({
   selector: 'app-login',
   standalone: true,
   imports: [
     CommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatIconModule,
+    MatProgressSpinnerModule // Adicionado para o loading
   ],
   templateUrl: './login.html',
   styleUrls: ['./login.css']
@@ -25,14 +39,9 @@ export class LoginComponent {
     private authService: AuthService,
     private router: Router
   ) {
-    // Se já estiver logado, redireciona para home
-    if (this.authService.isLoggedIn()) {
-      this.router.navigate(['/']);
-    }
-
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required]]
+      password: ['', [Validators.required, Validators.minLength(6)]]
     });
   }
 
@@ -47,22 +56,22 @@ export class LoginComponent {
 
     this.isLoading = true;
     this.errorMessage = null;
-    
     const { email, password } = this.loginForm.value;
 
-    // Simula um pequeno delay (como se fosse uma chamada de API)
-    setTimeout(() => {
-      const success = this.authService.login(email, password);
-      
-      this.isLoading = false;
-      
-      if (success) {
-        // Login bem-sucedido - redireciona para home
-        this.router.navigate(['/']);
-      } else {
-        // Login falhou - mostra mensagem de erro
-        this.errorMessage = 'Email ou senha inválidos. Tente: admin@fordcompany.com / admin123';
+    this.authService.login(email, password).subscribe({
+      next: (success) => {
+        this.isLoading = false;
+        if (success) {
+          this.router.navigate(['/home']);
+        } else {
+          this.errorMessage = 'Email ou senha inválidos.';
+        }
+      },
+      error: () => {
+        this.isLoading = false;
+        this.errorMessage = 'Ocorreu um erro. Tente novamente mais tarde.';
       }
-    }, 800);
+    });
   }
 }
+

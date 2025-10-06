@@ -1,7 +1,6 @@
 import { Component, HostListener } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { CommonModule } from '@angular/common';
-import { AuthService } from '../../../services/auth.service';
+import { CommonModule } from '@angular/common'; 
 
 @Component({
   selector: 'app-header',
@@ -13,16 +12,8 @@ import { AuthService } from '../../../services/auth.service';
 export class Header {
   isDropdownOpen = false;
 
-  constructor(private authService: AuthService) {}
-
   toggleDropdown() {
     this.isDropdownOpen = !this.isDropdownOpen;
-  }
-
-  logout() {
-    if (confirm('Tem certeza que deseja sair?')) {
-      this.authService.logout();
-    }
   }
 
   // Fecha o menu ao clicar fora
