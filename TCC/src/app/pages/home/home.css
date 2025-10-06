@@ -33,7 +33,9 @@ body {
   justify-content: center;
   overflow: hidden;
 }
-
+a{
+  text-decoration: none;
+}
 .hero-overlay {
   position: absolute;
   top: 0;
