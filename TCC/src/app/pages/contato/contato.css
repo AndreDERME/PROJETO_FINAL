@@ -268,7 +268,7 @@
   background: rgba(255, 255, 255, 0.1);
   border: 2px solid rgba(190, 255, 27, 0.3);
   border-radius: 10px;
-  color: #ffffff;
+  color: #000;
   font-size: 1rem;
   font-family: "Poppins", sans-serif;
   transition: all 0.3s ease;
@@ -383,5 +383,51 @@
   .submit-btn {
     padding: 15px 30px;
     font-size: 1rem;
+  }
+}
+
+/* ==================== CHECKBOX LGPD ==================== */
+.form-group-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.form-checkbox {
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  margin-top: 3px;
+  cursor: pointer;
+  accent-color: #beff1b;
+}
+
+.checkbox-label {
+  font-size: 0.9rem;
+  color: #d0d0d0;
+  line-height: 1.6;
+  cursor: pointer;
+}
+
+.privacy-link {
+  color: #beff1b;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.privacy-link:hover {
+  color: #d4ff5c;
+}
+
+/* Responsividade do checkbox */
+@media only screen and (max-width: 480px) {
+  .form-group-checkbox {
+    gap: 10px;
+  }
+
+  .checkbox-label {
+    font-size: 0.85rem;
   }
 }
