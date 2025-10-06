@@ -59,7 +59,7 @@ body {
   letter-spacing: 2px;
   background: linear-gradient(90deg, #ffffff, #beff1b);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: rgb(148, 169, 196);
   background-clip: text;
 }
 
