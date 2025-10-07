@@ -1,14 +1,23 @@
 <div class="main">
-<app-header></app-header>
+  <app-header></app-header>
 
-  <section>
-   
+  <section class="hero-banner">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">Encontre o Carro dos Seus Sonhos</h1>
+      <p class="hero-subtitle">
+        Veículos selecionados com a melhor condição e procedência
+      </p>
+      <a routerLink="/carros" class="hero-btn">Ver Estoque Agora</a>
+    </div>
+  </section>
+
+  <section class="carousel-section" id="carousel">
     <div class="list">
-
-      <!--  TODOS os carros se movem aq -->
-      <div class="trilho" [style.transform]="'translateX(-' + carroAtualIndex * 100 + '%)'">
-
-
+      <div
+        class="trilho"
+        [style.transform]="'translateX(-' + carroAtualIndex * 100 + '%)'"
+      >
         <div class="item" *ngFor="let carro of carros">
           <div class="car-img">
             <img [src]="carro.imagem" alt="Imagem do {{ carro.nome }}" />
@@ -19,7 +28,6 @@
             <p class="descrição">{{ carro.descricao }}</p>
           </div>
         </div>
-
       </div>
     </div>
 
@@ -32,7 +40,6 @@
       </button>
     </div>
 
-   
     <div class="indicator">
       <div class="number"></div>
       <ul>
@@ -44,48 +51,50 @@
   </section>
 
   <main>
-  
-   <section class="quem-somos">
-  <div class="quem-somos-conteudo">
-    <div class="quem-somos-texto">
-      <h1>QUEM SOMOS</h1>
-      <p>
-        Somos a Ford Company, uma concessionária apaixonada por carros e pela satisfação de nossos clientes. 
-        Oferecemos veículos de qualidade, com transparência, confiança e um atendimento 
-        que valoriza cada detalhe. Nosso compromisso é garantir que você encontre o carro 
-        dos seus sonhos com segurança e praticidade.
+    <section class="quem-somos">
+      <div class="quem-somos-conteudo">
+        <div class="quem-somos-texto">
+          <h1>QUEM SOMOS</h1>
+          <p>
+            Somos a Ford Company, uma concessionária apaixonada por carros e
+            pela satisfação de nossos clientes. Oferecemos veículos de
+            qualidade, com transparência, confiança e um atendimento que
+            valoriza cada detalhe. Nosso compromisso é garantir que você
+            encontre o carro dos seus sonhos com segurança e praticidade.
+          </p>
+        </div>
+        <div class="quem-somos-imagem">
+          <img
+            src="assets/vecteezy_business-people-talking-to-each-other-happy-ai-generated_28711820.png"
+            alt="Pessoas conversando"
+          />
+        </div>
+      </div>
+    </section>
+
+    <div class="localizacao">
+      <h1>
+        Nossa Localização
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/684/684908.png"
+          class="loc"
+          alt="ícone localização"
+        />
+      </h1>
+      <p class="localizacao-texto">
+        Estamos em um ponto de fácil acesso, venha nos visitar e conhecer
+        nosso showroom de veículos.
       </p>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.514435960005!2d-46.65657168502208!3d-23.56168498468066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c92c5b1d05%3A0x7e58b16f6a0f7d2!2sAvenida%20Paulista!5e0!3m2!1spt-BR!2sbr!4v1699972222222!5m2!1spt-BR!2sbr"
+          width="100%"
+          height="400"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+      </div>
     </div>
-
-    <div class="quem-somos-imagem">
-      <img src="assets/vecteezy_business-people-talking-to-each-other-happy-ai-generated_28711820.png" alt="Pessoas conversando">
-    </div>
-  </div>
-</section>
-
-  
-  <div class="localizacao">
-    <h1>
-      Nossa Localização 
-      <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" class="loc" alt="ícone localização">
-    </h1>
-
-    <p class="localizacao-texto">
-      Estamos em um ponto de fácil acesso, venha nos visitar e conhecer nosso showroom de veículos.
-    </p>
-
-    <div class="map-container">
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.514435960005!2d-46.65657168502208!3d-23.56168498468066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c92c5b1d05%3A0x7e58b16f6a0f7d2!2sAvenida%20Paulista!5e0!3m2!1spt-BR!2sbr!4v1699972222222!5m2!1spt-BR!2sbr" 
-        width="100%" 
-        height="400" 
-        style="border:0;" 
-        allowfullscreen="" 
-        loading="lazy">
-      </iframe>
-    </div>
-  </div>
-  
-
   </main>
-</div>
+  </div>
