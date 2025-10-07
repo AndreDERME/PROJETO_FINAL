@@ -12,87 +12,49 @@ html, body {
 }
 
 body {
-  background: black;
-  color: aliceblue;
+  background: #0a0e27;
+  color: #ffffff;
   font-size: 16px;
+}
 
+.main {
+  flex: 1;
+  background: linear-gradient(135deg, #0a0e27 0%, #1a2456 50%, #0d5385 100%);
+  min-height: 100vh;
 }
 
 main {
-  padding: 2rem;
-  background: radial-gradient(#0d5385, #0d5385);
-
-}
-
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* sempre 3 por linha */
-  gap: 2rem;
-  padding: 2rem;
-  max-width: 1300px;
+  padding: 120px 20px 80px;
+  max-width: 1400px;
   margin: 0 auto;
-  margin-top: 150px;
 }
 
-.card {
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+/* ==================== CABEÇALHO DA PÁGINA ==================== */
+.page-header {
   text-align: center;
-  backdrop-filter: blur(10px);
-  transform: translateY(20px);
-  opacity: 0;
-  animation: fadeInUp 0.8s forwards;
-  transition: transform 0.6s ease, box-shadow 0.6s ease;
+  margin-bottom: 60px;
+  animation: fadeInDown 0.8s ease-out;
 }
 
-.card:hover {
-   transform: scale(1.5);
-  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.5);
-
+.page-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #beff1b;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
-.card img {
-  width: 100%;
-  height: auto;
-  display: block;
+.page-subtitle {
+  font-size: 1.2rem;
+  color: #d0d0d0;
+  font-weight: 300;
 }
 
-.card h2 {
-  font-size: 1.5rem;
-  margin: 1rem 0 0.5rem;
-}
-
-.card .preco {
-  font-size: 1.1rem;
-  color: #ffeb3b;
-  margin-bottom: 1rem;
-}
-
-.card button {
-  margin-bottom: 1.5rem;
-  padding: 0.7rem 1.5rem;
-  border: none;
-  background: #ffeb3b;
-  color: #000;
-  font-size: 1rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-
-.card button:hover {
-  background: #d8bd42;
-  transform: scale(1.05);
-}
-
-
-@keyframes fadeInUp {
+@keyframes fadeInDown {
   from {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(-30px);
   }
   to {
     opacity: 1;
@@ -100,258 +62,371 @@ main {
   }
 }
 
- .carrinho {
-    display: block;
-    text-align: center;
-    margin: auto;
-    max-width: 100%;
-    margin-top: 80px;
- }
-
-  .carrinho2{
-     display: block;
-    text-align: center;
-    margin: auto;
-    max-width: 80%;
-    margin-top: 50px;
-
-  }
-  
-  .carrinho3{
-     display: block;
-    text-align: center;
-    margin: auto;
-    margin-top: 80px;
-
-  }
-
-  .carrinho4 {
-    margin-top: 30px;
- }
-
- .carrinho5 {
-    display: block;
-    text-align: center;
-    margin: auto;
-    max-width: 100%;
-    margin-top: 85px;
- }
- .carrinho6{
-  max-width: 90%;
- }
- .carrinhoka{
-  margin-top: 10px;
- }
-
-
- .sedan{
-  margin-top: 35px;
- }
-
- .eco{
-  margin-top: 15px;
-
+/* ==================== GRID DE CARROS ==================== */
+.cars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  animation: fadeInUp 1s ease-out;
 }
 
- h1{
-  display: block;
-  text-align: center;
-  margin: auto;
-  margin-top: 200px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-a{
+/* ==================== CARDS DE CARROS ==================== */
+.car-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  border: 2px solid transparent;
+  backdrop-filter: blur(10px);
+}
+
+.car-card:hover {
+  transform: translateY(-10px);
+  border-color: #beff1b;
+  box-shadow: 0 20px 50px rgba(190, 255, 27, 0.2);
+}
+
+.car-card-image {
+  position: relative;
+  height: 280px;
+  min-height: 280px;
+  max-height: 280px;
+  background: linear-gradient(135deg, #0d5385, #1a2456);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.car-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  transition: transform 0.4s ease;
+  max-height: 240px;
+}
+
+.car-card:hover .car-card-image img {
+  transform: scale(1.1);
+}
+
+.car-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: linear-gradient(135deg, #beff1b, #0ea8a8);
+  color: #0a0e27;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.car-card-content {
+  padding: 25px;
+}
+
+.car-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.car-details {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  color: #beff1b;
+  font-size: 0.95rem;
+}
+
+.car-separator {
+  color: #666;
+}
+
+.car-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #d0d0d0;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.car-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.car-price {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #beff1b;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.car-btn {
+  padding: 12px 30px;
+  background: linear-gradient(135deg, #beff1b, #0ea8a8);
+  color: #0a0e27;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
   text-decoration: none;
-  color: rgba(0, 0, 0, 0.774);
+  display: inline-block;
 }
 
-@media screen and (max-width: 1024px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-    padding: 1.5rem;
-    margin-top: 100px;
+.car-btn:hover {
+  transform: translateX(5px);
+  box-shadow: 0 5px 20px rgba(190, 255, 27, 0.4);
+}
+
+/* ==================== RESPONSIVIDADE ==================== */
+
+/* Tablets grandes (993px - 1200px) */
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+  .cars-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
-  
-  h1 {
-    font-size: 2.2rem;
-    margin-top: 150px;
-  }
-  
+}
+
+/* Tablets (768px - 992px) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
   main {
-    padding: 1.5rem;
+    padding: 100px 20px 60px;
   }
-  
-  .card:hover {
-    transform: scale(1.03);
+
+  .page-title {
+    font-size: 2.5rem;
   }
-  
-  .card h2 {
-    font-size: 1.3rem;
+
+  .page-subtitle {
+    font-size: 1.1rem;
   }
-  
-  .card .preco {
+
+  .cars-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .car-name {
+    font-size: 1.6rem;
+  }
+
+  .car-price {
+    font-size: 1.6rem;
+  }
+}
+
+/* Celulares grandes (481px - 767px) */
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  main {
+    padding: 90px 15px 50px;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .page-subtitle {
     font-size: 1rem;
   }
-}
 
-/* Tablets pequenos e celulares grandes (481px - 768px) */
-@media screen and (max-width: 768px) {
-  .grid {
+  .cars-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    padding: 1rem;
-    margin-top: 80px;
+    gap: 20px;
   }
-  
-  h1 {
-    font-size: 1.8rem;
-    margin-top: 100px;
+
+  .car-card-image {
+    height: 200px;
   }
-  
-  main {
-    padding: 1rem;
+
+  .car-card-content {
+    padding: 20px;
   }
-  
-  .card {
-    border-radius: 12px;
+
+  .car-name {
+    font-size: 1.4rem;
   }
-  
-  .card h2 {
-    font-size: 1.2rem;
-    margin: 0.8rem 0 0.4rem;
+
+  .car-price {
+    font-size: 1.5rem;
   }
-  
-  .card .preco {
-    font-size: 0.95rem;
-    margin-bottom: 0.8rem;
-  }
-  
-  .card button {
-    padding: 0.6rem 1.2rem;
-    font-size: 0.9rem;
-    margin-bottom: 1.2rem;
-  }
-  
-  /* Ajustes específicos para imagens em tablets */
-  .carrinho, .carrinho2, .carrinho3, .carrinho5 {
-    margin-top: 40px;
-  }
-  
-  .carrinho4, .carrinhoka, .sedan, .eco {
-    margin-top: 20px;
+
+  .car-btn {
+    padding: 10px 25px;
+    font-size: 0.85rem;
   }
 }
 
-/* Celulares - Telas pequenas (até 480px) */
-@media screen and (max-width: 480px) {
-  .grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    padding: 0.8rem;
-    margin-top: 60px;
-  }
-  
-  h1 {
-    font-size: 1.5rem;
-    margin-top: 80px;
-    padding: 0 1rem;
-  }
-  
+/* Celulares pequenos (até 480px) */
+@media only screen and (max-width: 480px) {
   main {
-    padding: 0.8rem;
+    padding: 80px 15px 40px;
   }
-  
-  .card {
-    border-radius: 10px;
-    max-width: 100%;
+
+  .page-header {
+    margin-bottom: 40px;
   }
-  
-  .card:hover {
-    transform: scale(1.02);
+
+  .page-title {
+    font-size: 1.8rem;
   }
-  
-  .card h2 {
-    font-size: 1.1rem;
-    margin: 0.6rem 0 0.3rem;
+
+  .page-subtitle {
+    font-size: 0.95rem;
   }
-  
-  .card .preco {
+
+  .cars-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .car-card-image {
+    height: 220px;
+  }
+
+  .car-card-content {
+    padding: 20px;
+  }
+
+  .car-name {
+    font-size: 1.5rem;
+  }
+
+  .car-details {
     font-size: 0.9rem;
-    margin-bottom: 0.6rem;
   }
-  
-  .card button {
-    padding: 0.5rem 1rem;
-    font-size: 0.85rem;
-    margin-bottom: 1rem;
+
+  .car-description {
+    font-size: 0.9rem;
+    -webkit-line-clamp: 2;
   }
-  
-  /* Resetar margens específicas para celulares */
-  .carrinho, .carrinho2, .carrinho3, .carrinho4, .carrinho5, .carrinho6,
-  .carrinhoka, .sedan, .eco {
-    margin-top: 0;
-    max-width: 100%;
+
+  .car-footer {
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+  }
+
+  .car-price {
+    font-size: 1.4rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .car-btn {
+    width: 100%;
+    text-align: center;
+    padding: 12px 20px;
   }
 }
 
 /* Celulares muito pequenos (até 320px) */
-@media screen and (max-width: 320px) {
-  h1 {
-    font-size: 1.3rem;
-    margin-top: 60px;
-  }
-  
-  .grid {
-    margin-top: 40px;
-    padding: 0.5rem;
-  }
-  
+@media only screen and (max-width: 320px) {
   main {
-    padding: 0.5rem;
+    padding: 70px 10px 30px;
   }
-  
-  .card h2 {
-    font-size: 1rem;
+
+  .page-title {
+    font-size: 1.5rem;
   }
-  
-  .card .preco {
+
+  .page-subtitle {
     font-size: 0.85rem;
   }
-  
-  .card button {
-    padding: 0.4rem 0.8rem;
-    font-size: 0.8rem;
+
+  .cars-grid {
+    gap: 20px;
+  }
+
+  .car-card-image {
+    height: 180px;
+  }
+
+  .car-card-content {
+    padding: 15px;
+  }
+
+  .car-name {
+    font-size: 1.3rem;
+  }
+
+  .car-price {
+    font-size: 1.4rem;
   }
 }
 
-/* Melhorias para acessibilidade e usabilidade */
-@media (prefers-reduced-motion: reduce) {
-  .card {
-    animation: none;
-    transform: none;
-    opacity: 1;
-  }
-  
-  .card:hover {
-    transform: none;
-  }
-  
-  .card button:hover {
-    transform: none;
-  }
-}
-
-/* Ajustes para orientação landscape em dispositivos móveis */
+/* Orientação landscape em dispositivos móveis */
 @media screen and (max-height: 500px) and (orientation: landscape) {
-  h1 {
-    margin-top: 40px;
-    font-size: 1.8rem;
+  main {
+    padding: 60px 20px 40px;
   }
-  
-  .grid {
-    margin-top: 20px;
+
+  .page-header {
+    margin-bottom: 30px;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .cars-grid {
     grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .car-card-image {
+    height: 150px;
+  }
+}
+
+/* Preferência de movimento reduzido (acessibilidade) */
+@media (prefers-reduced-motion: reduce) {
+  .car-card,
+  .page-header,
+  .cars-grid {
+    animation: none;
+  }
+
+  .car-card:hover {
+    transform: none;
+  }
+
+  .car-card:hover .car-card-image img {
+    transform: none;
+  }
+
+  .car-btn:hover {
+    transform: none;
   }
 }
