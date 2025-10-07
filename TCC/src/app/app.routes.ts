@@ -124,7 +124,7 @@ export const routes: Routes = [
     {
         path:"privacidade",
         component:Privacidade,
-    }
+    },
     
     
 

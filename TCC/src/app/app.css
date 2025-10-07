@@ -1,4 +1,15 @@
 
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.main {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+
 .rodape_site {
   background: rgba(12, 149, 228, 0.822);
   padding: 30px 20px;
