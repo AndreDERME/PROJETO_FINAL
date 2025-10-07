@@ -184,6 +184,8 @@ main {
   font-size: 1.8rem;
   font-weight: 700;
   color: #beff1b;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .car-btn {
@@ -332,11 +334,14 @@ main {
   .car-footer {
     flex-direction: column;
     gap: 15px;
-    align-items: flex-start;
+    align-items: stretch;
   }
 
   .car-price {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .car-btn {
