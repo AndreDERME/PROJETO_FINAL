@@ -40,7 +40,7 @@
 }
 
 .hero-title {
-  font-size: 4rem;
+  font-size: clamp(2rem, 4vw + 1rem, 4rem);
   font-weight: 700;
   margin-bottom: 25px;
   color: #beff1b;
@@ -49,7 +49,7 @@
 }
 
 .hero-subtitle {
-  font-size: 1.4rem;
+  font-size: clamp(1rem, 1.5vw + 0.5rem, 1.4rem);
   color: #d0d0d0;
   margin-bottom: 40px;
   line-height: 1.8;
@@ -64,7 +64,7 @@
   color: #ffffff;
   text-decoration: none;
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 1.5vw + 0.3rem, 1.2rem);
   border-radius: 50px;
   transition: all 0.3s ease;
   box-shadow: 0 15px 40px rgba(37, 211, 102, 0.4);
@@ -76,7 +76,7 @@
 }
 
 .btn-icon {
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
 }
 
 /* ==================== SEÇÕES GERAIS ==================== */
@@ -90,24 +90,25 @@
 }
 
 .section-title {
-  font-size: 2.8rem;
+  font-size: clamp(1.8rem, 3vw + 0.8rem, 2.8rem);
   font-weight: 700;
   color: #beff1b;
   text-align: center;
   margin-bottom: 20px;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: auto;
+ 
 }
 
 .section-subtitle {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 1.5vw + 0.3rem, 1.2rem);
   color: #d0d0d0;
   text-align: center;
   margin-bottom: 60px;
 }
 
 .section-description {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 1.5vw + 0.3rem, 1.2rem);
   color: #e0e0e0;
   text-align: center;
   line-height: 1.9;
@@ -144,19 +145,19 @@
 }
 
 .advantage-icon {
-  font-size: 4rem;
+  font-size: clamp(3rem, 5vw, 4rem);
   margin-bottom: 20px;
 }
 
 .advantage-title {
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 2vw + 0.3rem, 1.5rem);
   font-weight: 700;
   color: #beff1b;
   margin-bottom: 15px;
 }
 
 .advantage-description {
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 1.3vw, 1rem);
   color: #d0d0d0;
   line-height: 1.7;
 }
@@ -200,7 +201,7 @@
   justify-content: center;
   background: linear-gradient(135deg, #beff1b, #0ea8a8);
   border-radius: 50%;
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
   font-weight: 700;
   color: #0a0e27;
 }
@@ -210,14 +211,14 @@
 }
 
 .step-title {
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 2vw + 0.3rem, 1.5rem);
   font-weight: 700;
   color: #ffffff;
   margin-bottom: 12px;
 }
 
 .step-description {
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 1.3vw, 1rem);
   color: #d0d0d0;
   line-height: 1.7;
 }
@@ -246,19 +247,19 @@
 }
 
 .why-us-icon {
-  font-size: 4rem;
+  font-size: clamp(3rem, 5vw, 4rem);
   margin-bottom: 20px;
 }
 
 .why-us-title {
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 2vw + 0.3rem, 1.5rem);
   font-weight: 700;
   color: #beff1b;
   margin-bottom: 15px;
 }
 
 .why-us-description {
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 1.3vw, 1rem);
   color: #d0d0d0;
   line-height: 1.7;
 }
@@ -272,14 +273,14 @@
 }
 
 .cta-title {
-  font-size: 3rem;
+  font-size: clamp(1.8rem, 3vw + 0.8rem, 3rem);
   font-weight: 700;
   color: #beff1b;
   margin-bottom: 20px;
 }
 
 .cta-subtitle {
-  font-size: 1.3rem;
+  font-size: clamp(1rem, 1.5vw + 0.4rem, 1.3rem);
   color: #d0d0d0;
   margin-bottom: 40px;
   line-height: 1.7;
@@ -294,7 +295,7 @@
   color: #0a0e27;
   text-decoration: none;
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 1.5vw + 0.3rem, 1.2rem);
   border-radius: 50px;
   transition: all 0.3s ease;
   box-shadow: 0 15px 40px rgba(190, 255, 27, 0.4);
@@ -309,48 +310,19 @@
 
 /* ==================== RESPONSIVIDADE ==================== */
 @media only screen and (max-width: 992px) {
-  .hero-title {
-    font-size: 3rem;
-  }
-
-  .hero-subtitle {
-    font-size: 1.2rem;
-  }
-
-  .section-title {
-    font-size: 2.3rem;
-  }
-
   .advantages-grid,
   .why-us-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 800px) {
   .consorcio-page {
-    padding-top: 80px;
+    padding-top: 100px;
   }
 
   .hero-section {
     padding: 80px 20px;
-  }
-
-  .hero-title {
-    font-size: 2.5rem;
-  }
-
-  .hero-subtitle {
-    font-size: 1.1rem;
-  }
-
-  .section-title {
-    font-size: 2rem;
-  }
-
-  .section-subtitle,
-  .section-description {
-    font-size: 1rem;
   }
 
   .advantages-grid,
@@ -364,42 +336,17 @@
     align-items: center;
     text-align: center;
   }
-
-  .cta-title {
-    font-size: 2.3rem;
-  }
-
-  .cta-subtitle {
-    font-size: 1.1rem;
-  }
 }
 
 @media only screen and (max-width: 480px) {
-  .hero-title {
-    font-size: 2rem;
-  }
-
-  .hero-subtitle {
-    font-size: 1rem;
-  }
-
   .hero-btn,
   .cta-btn {
     padding: 15px 30px;
-    font-size: 1rem;
-  }
-
-  .section-title {
-    font-size: 1.8rem;
   }
 
   .advantage-card,
   .why-us-card,
   .step-item {
     padding: 25px 20px;
-  }
-
-  .cta-title {
-    font-size: 1.8rem;
   }
 }
