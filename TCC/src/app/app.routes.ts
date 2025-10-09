@@ -18,6 +18,7 @@ import { ModelEdge } from './pages/model-edge/model-edge';
 import { Fordcourier } from './pages/fordcourier/fordcourier';
 import { Financiamento } from './pages/servicos/financiamento/financiamento';
 import { Consorcio } from './pages/servicos/consorcio/consorcio';
+import { Privacidade } from './pages/privacidade/privacidade';
 
 export const routes: Routes = [
     {
@@ -119,6 +120,11 @@ export const routes: Routes = [
     {
         path:"consorcio",
         component:Consorcio,
+    },
+
+    {
+        path:"privacidade",
+        component:Privacidade,
     },
     
     
