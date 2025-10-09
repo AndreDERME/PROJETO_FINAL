@@ -29,6 +29,7 @@ main {
   margin: 0 auto;
 }
 
+
 /* ==================== CABEÇALHO DA PÁGINA ==================== */
 .page-header {
   text-align: center;
@@ -40,7 +41,7 @@ main {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 15px;
-  color: #beff1b;
+  color: #beff1bd0;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -224,6 +225,7 @@ main {
     padding: 100px 20px 60px;
   }
 
+
   .page-title {
     font-size: 2.5rem;
   }
@@ -250,7 +252,8 @@ main {
 @media only screen and (min-width: 481px) and (max-width: 767px) {
   main {
     padding: 90px 15px 50px;
-  }
+  
+}
 
   .page-title {
     font-size: 2rem;
@@ -292,7 +295,7 @@ main {
   main {
     padding: 80px 15px 40px;
   }
-
+ 
   .page-header {
     margin-bottom: 40px;
   }
@@ -356,6 +359,7 @@ main {
   main {
     padding: 70px 10px 30px;
   }
+ 
 
   .page-title {
     font-size: 1.5rem;
@@ -391,6 +395,7 @@ main {
   main {
     padding: 60px 20px 40px;
   }
+ 
 
   .page-header {
     margin-bottom: 30px;
