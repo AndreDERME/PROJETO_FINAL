@@ -13,7 +13,7 @@ import { RouterLink } from '@angular/router';
 
 export class HomeComponent {
 
-  // Array para o carrossel (3 carros principais)
+
   carrosCarousel = [
     {
       nome: 'EcoSport',
@@ -35,7 +35,6 @@ export class HomeComponent {
     }
   ];
 
-  // Array para os cards de destaque (6 carros com mais informações)
   carros = [
     {
       nome: 'Ford EcoSport',
@@ -56,7 +55,7 @@ export class HomeComponent {
       link: '/model-focus'
     },
     {
-      nome: 'Ford Fiesta Sedan',
+      nome: 'Ford Fiesta',
       ano: 2016,
       km: '65.000',
       preco: '38.900',
