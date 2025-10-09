@@ -14,7 +14,7 @@ html, body {
 body {
   background: #0a0e27;
   color: #ffffff;
-  font-size: 16px;
+  font-size: clamp(14px, 2vw, 16px);
 }
 
 .main {
@@ -57,7 +57,7 @@ a{
 }
 
 .hero-title {
-  font-size: 4rem;
+  font-size: clamp(2rem, 5vw + 1rem, 4rem);
   font-weight: 700;
   margin-bottom: 20px;
   text-transform: uppercase;
@@ -65,13 +65,15 @@ a{
   color: #ffffff;
   text-shadow: 0 4px 20px rgba(190, 255, 27, 0.3);
   line-height: 1.2;
-  white-space: nowrap;
+  white-space: normal;
   overflow: visible;
+  word-wrap: break-word;
+  max-width: 100%;
 }
 
 
 .hero-subtitle {
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 2vw + 0.5rem, 1.5rem);
   margin-bottom: 40px;
   color: #e0e0e0;
   font-weight: 300;
@@ -84,7 +86,7 @@ a{
   color: #0a0e27;
   text-decoration: none;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: clamp(0.9rem, 1.5vw + 0.5rem, 1.1rem);
   border-radius: 50px;
   transition: all 0.3s ease;
   box-shadow: 0 10px 30px rgba(190, 255, 27, 0.3);
@@ -191,10 +193,11 @@ a{
 .carousel-section .list .item .content .car-inform { 
   font-weight: bold; 
   color: #beff1b;
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
 }
 
 .carousel-section .list .item .content h2 {
-  font-size: 3em;
+  font-size: clamp(2em, 4vw + 1em, 4em);
   line-height: 1.2em;
   font-family: "League Gothic", sans-serif;
   color: #ffffff;
@@ -202,7 +205,7 @@ a{
 
 .carousel-section .list .item .content .descrição {
   max-width: 90%;
-  font-size: 14px;
+  font-size: clamp(12px, 1.5vw, 14px);
   color: #d9d9d9;
   text-align: center;
 }
@@ -257,7 +260,7 @@ a{
 }
 
 .carousel-section .indicator .number {
-  font-size: 2em;
+  font-size: clamp(1.5em, 3vw, 2em);
   font-family: "League Gothic", sans-serif;
 }
 
@@ -292,14 +295,6 @@ a{
     max-width: 300px;
   }
 
-  .carousel-section .list .item .content h2 {
-    font-size: 2.5em;
-  }
-
-  .carousel-section .list .item .content .descrição {
-    font-size: 12px;
-  }
-
   .carousel-section .arrow {
     width: calc(100% - 40px);
     max-width: 90vw;
@@ -331,10 +326,6 @@ a{
     max-width: 400px;
   }
 
-  .carousel-section .list .item .content h2 {
-    font-size: 3.5em;
-  }
-
   .carousel-section .arrow {
     width: 80vw;
   }
@@ -361,10 +352,6 @@ a{
     align-items: flex-start;
   }
 
-  .carousel-section .list .item .content h2 {
-    font-size: 4em;
-  }
-
   .carousel-section .arrow {
     width: 70vw;
   }
@@ -382,7 +369,7 @@ a{
 }
 
 .section-title {
-  font-size: 2.5rem;
+  font-size: clamp(1.8rem, 3vw + 1rem, 2.5rem);
   font-weight: 700;
   margin-bottom: 15px;
   color: #beff1bcb;
@@ -391,7 +378,7 @@ a{
 }
 
 .section-subtitle {
-  font-size: 1.1rem;
+  font-size: clamp(0.95rem, 1.5vw + 0.5rem, 1.1rem);
   color: #d0d0d0;
   font-weight: 300;
 }
@@ -455,7 +442,7 @@ a{
   padding: 8px 20px;
   border-radius: 20px;
   font-weight: 600;
-  font-size: 0.85rem;
+  font-size: clamp(0.75rem, 1vw + 0.3rem, 0.85rem);
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -465,7 +452,7 @@ a{
 }
 
 .car-name {
-  font-size: 1.8rem;
+  font-size: clamp(1.4rem, 2vw + 0.5rem, 1.8rem);
   font-weight: 700;
   margin-bottom: 10px;
   color: #ffffff;
@@ -477,7 +464,7 @@ a{
   gap: 10px;
   margin-bottom: 15px;
   color: #beff1b;
-  font-size: 0.95rem;
+  font-size: clamp(0.85rem, 1.2vw, 0.95rem);
 }
 
 .car-separator {
@@ -485,7 +472,7 @@ a{
 }
 
 .car-description {
-  font-size: 0.95rem;
+  font-size: clamp(0.85rem, 1.2vw, 0.95rem);
   line-height: 1.6;
   color: #d0d0d0;
   margin-bottom: 20px;
@@ -504,7 +491,7 @@ a{
 }
 
 .car-price {
-  font-size: 1.8rem;
+  font-size: clamp(1.4rem, 2vw + 0.5rem, 1.8rem);
   font-weight: 700;
   color: #beff1bdc;
 }
@@ -519,7 +506,7 @@ a{
   cursor: pointer;
   transition: all 0.3s ease;
   text-transform: uppercase;
-  font-size: 0.9rem;
+  font-size: clamp(0.8rem, 1.2vw, 0.9rem);
   letter-spacing: 1px;
 }
 
@@ -548,7 +535,7 @@ a{
 }
 
 .quem-somos-texto p {
-  font-size: 1.1rem;
+  font-size: clamp(0.95rem, 1.5vw + 0.3rem, 1.1rem);
   line-height: 1.8;
   color: #e0e0e0;
   margin-bottom: 20px;
@@ -623,14 +610,14 @@ a{
 }
 
 .service-title {
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 2vw + 0.5rem, 1.5rem);
   font-weight: 700;
   margin-bottom: 15px;
   color: #ffffff;
 }
 
 .service-description {
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 1.3vw, 1rem);
   line-height: 1.7;
   color: #d0d0d0;
 }
@@ -684,21 +671,21 @@ a{
 }
 
 .footer-title {
-  font-size: 1.8rem;
+  font-size: clamp(1.4rem, 2.5vw + 0.5rem, 1.8rem);
   font-weight: 700;
   margin-bottom: 15px;
   color: #beff1b;
 }
 
 .footer-subtitle {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 1.8vw + 0.3rem, 1.2rem);
   font-weight: 600;
   margin-bottom: 15px;
   color: #ffffff;
 }
 
 .footer-text {
-  font-size: 0.95rem;
+  font-size: clamp(0.85rem, 1.2vw, 0.95rem);
   line-height: 1.8;
   color: #d0d0d0;
   margin-bottom: 8px;
@@ -737,26 +724,13 @@ a{
   padding-top: 30px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   color: #999;
-  font-size: 0.9rem;
+  font-size: clamp(0.8rem, 1.2vw, 0.9rem);
 }
 
 /* ==================== RESPONSIVIDADE ==================== */
 
 /* Dispositivos Pequenos (telefones, 600px e abaixo) */
 @media only screen and (max-width: 600px) {
-  .hero-title {
-    font-size: 2.5rem;
-  }
-
-  .hero-subtitle {
-    font-size: 1.1rem;
-  }
-
-  .hero-btn {
-    padding: 15px 35px;
-    font-size: 1rem;
-  }
-
   .search-filters {
     flex-direction: column;
   }
@@ -769,20 +743,8 @@ a{
     width: 100%;
   }
 
-  .section-title {
-    font-size: 2rem;
-  }
-
   .cars-grid {
     grid-template-columns: 1fr;
-  }
-
-  .car-name {
-    font-size: 1.5rem;
-  }
-
-  .car-price {
-    font-size: 1.5rem;
   }
 
   .quem-somos-conteudo {
@@ -805,10 +767,6 @@ a{
 
 /* Dispositivos Médios (tablets, 601px a 992px) */
 @media only screen and (min-width: 601px) and (max-width: 992px) {
-  .hero-title {
-    font-size: 3.5rem;
-  }
-
   .cars-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -823,25 +781,4 @@ a{
   .cars-grid {
     grid-template-columns: repeat(3, 1fr);
   }
-}
-@media only screen and (max-width: 750px) {
-  .hero-title {
-    font-size: 2rem;
-    white-space: normal;
-    word-wrap: break-word;
-    max-width: 100%;
-    padding: 0 10px;
-  }
-
-  .hero-subtitle {
-    font-size: 1rem;
-    padding: 0 10px;
-  }
-
-  .hero-btn {
-    padding: 15px 35px;
-    font-size: 1rem;
-  }
-
-  
 }
