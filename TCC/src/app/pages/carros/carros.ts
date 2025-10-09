@@ -34,7 +34,7 @@ export class Carros {
       link: '/model-focus'
     },
     {
-      nome: 'Ford Fiesta Sedan',
+      nome: 'Ford Fiesta ',
       ano: 2016,
       km: '65.000',
       preco: '42.900,00',
@@ -64,8 +64,8 @@ export class Carros {
       link: '/model-fusion'
     },
     {
-      nome: 'Ford GT-40',
-      ano: 1966,
+      nome: 'Ford Flashback',
+      ano: 1967,
       km: '12.000',
       preco: '135.000,00',
       badge: 'Clássico',
