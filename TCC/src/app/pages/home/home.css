@@ -80,7 +80,7 @@ a{
 .hero-btn {
   display: inline-block;
   padding: 18px 45px;
-  background: linear-gradient(135deg, #beff1b, #0ea8a8);
+  background: linear-gradient(135deg, #beff1bcc, #0ea8a8);
   color: #0a0e27;
   text-decoration: none;
   font-weight: 600;
@@ -374,74 +374,6 @@ a{
   }
 }
 
-/* ==================== BARRA DE PESQUISA ==================== */
-.search-bar {
-  padding: 60px 20px;
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(10px);
-}
-
-.search-container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.search-title {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 30px;
-  color: #beff1b;
-}
-
-.search-filters {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.search-input {
-  flex: 1;
-  min-width: 200px;
-  padding: 15px 20px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 2px solid rgba(190, 255, 27, 0.3);
-  border-radius: 10px;
-  color: #ffffff;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-}
-
-.search-input:focus {
-  outline: none;
-  border-color: #beff1b;
-  background: rgba(255, 255, 255, 0.15);
-}
-
-.search-input option {
-  background: #0a0e27;
-  color: #ffffff;
-}
-
-.search-btn {
-  padding: 15px 40px;
-  background: linear-gradient(135deg, #beff1b, #0ea8a8);
-  color: #0a0e27;
-  border: none;
-  border-radius: 10px;
-  font-weight: 600;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.search-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(190, 255, 27, 0.4);
-}
 
 /* ==================== SEÇÕES GERAIS ==================== */
 .section-header {
@@ -453,7 +385,7 @@ a{
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 15px;
-  color: #beff1b;
+  color: #beff1bcb;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -489,7 +421,7 @@ a{
 
 .car-card:hover {
   transform: translateY(-10px);
-  border-color: #beff1b;
+  border-color: #beff1bd0;
   box-shadow: 0 20px 50px rgba(190, 255, 27, 0.2);
 }
 
@@ -518,7 +450,7 @@ a{
   position: absolute;
   top: 15px;
   right: 15px;
-  background: linear-gradient(135deg, #beff1b, #0ea8a8);
+  background: linear-gradient(135deg, #beff1bb9, #0ea8a8);
   color: #0a0e27;
   padding: 8px 20px;
   border-radius: 20px;
@@ -574,12 +506,12 @@ a{
 .car-price {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #beff1b;
+  color: #beff1bdc;
 }
 
 .car-btn {
   padding: 12px 30px;
-  background: linear-gradient(135deg, #beff1b, #0ea8a8);
+  background: linear-gradient(135deg, #beff1bd0, #0ea8a8);
   color: #0a0e27;
   border: none;
   border-radius: 25px;
@@ -625,7 +557,7 @@ a{
 .quem-somos-destaque {
   padding: 20px;
   background: rgba(190, 255, 27, 0.1);
-  border-left: 4px solid #beff1b;
+  border-left: 4px solid #beff1bc0;
   border-radius: 5px;
   font-weight: 500;
   color: #beff1b !important;
@@ -685,7 +617,7 @@ a{
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #beff1b, #0ea8a8);
+  background: linear-gradient(135deg, #beff1bdc, #0ea8a8);
   border-radius: 50%;
   color: #0a0e27;
 }
@@ -911,5 +843,5 @@ a{
     font-size: 1rem;
   }
 
-  /* resto do código continua igual */
+  
 }
