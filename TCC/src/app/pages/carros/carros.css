@@ -38,12 +38,13 @@ main {
 }
 
 .page-title {
-  font-size: 3rem;
+  font-size: clamp(2.5rem, 6vw, 4rem); 
   font-weight: 700;
   margin-bottom: 15px;
-  color: #beff1bd0;
+  color: #beff1b; 
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px; 
+  line-height: 1.1; 
 }
 
 .page-subtitle {
@@ -295,7 +296,7 @@ main {
   main {
     padding: 80px 15px 40px;
   }
- 
+  
   .page-header {
     margin-bottom: 40px;
   }
@@ -359,7 +360,7 @@ main {
   main {
     padding: 70px 10px 30px;
   }
- 
+  
 
   .page-title {
     font-size: 1.5rem;
@@ -395,7 +396,7 @@ main {
   main {
     padding: 60px 20px 40px;
   }
- 
+  
 
   .page-header {
     margin-bottom: 30px;
