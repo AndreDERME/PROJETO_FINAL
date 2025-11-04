@@ -12,11 +12,16 @@ import { AuthService } from '../../../services/auth.service';
 })
 export class Header {
   isDropdownOpen = false;
+  isMenuOpen = false; // Adicionado para controlar o menu hambúrguer
 
   constructor(private authService: AuthService) {}
 
   toggleDropdown() {
     this.isDropdownOpen = !this.isDropdownOpen;
+  }
+
+  toggleMenu() { // Adicionado para alternar o estado do menu hambúrguer
+    this.isMenuOpen = !this.isMenuOpen;
   }
 
   logout() {
@@ -31,6 +36,10 @@ export class Header {
     const target = event.target as HTMLElement;
     if (!target.closest('.dropdown')) {
       this.isDropdownOpen = false;
+    }
+    // Adicionado para fechar o menu hambúrguer ao clicar fora
+    if (!target.closest('.hamburger-menu') && !target.closest('nav')) {
+      this.isMenuOpen = false;
     }
   }
 }
