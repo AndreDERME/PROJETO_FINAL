@@ -1,7 +1,13 @@
 <header class="senhor_conteiner">
   <img src="assets/ford-96.png" id="logo-ford" />
 
-  <nav>
+  <button class="hamburger-menu" (click)="toggleMenu()">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+
+  <nav [class.menu-open]="isMenuOpen">
     <ul>
       <li><a routerLink="">Home</a></li>
       <li><a routerLink="/carros">Carros</a></li>
