@@ -1,3 +1,4 @@
+/* ==================== RESET ==================== */
 * {
   margin: 0;
   padding: 0;
@@ -5,8 +6,14 @@
   font-family: "Poppins", sans-serif;
 }
 
+body {
+  
+  color: #d0d0d0;
+  overflow-x: hidden;
+}
+
 .main {
-  background: linear-gradient(135deg, #0a0e27 0%, #1a2456 50%, #0d5385 100%);
+  background: linear-gradient( #1a2456 , #0d5385 );
   min-height: 100vh;
 }
 
@@ -18,7 +25,7 @@
 .hero-section {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 100px 20px;
+  padding: clamp(60px, 8vw, 120px) 20px;
   text-align: center;
   animation: fadeInUp 1s ease-out;
 }
@@ -40,17 +47,19 @@
 }
 
 .hero-title {
-  font-size: clamp(2rem, 4vw + 1rem, 4rem);
+  /* MODIFICADO: Ajustes para melhor responsividade do título principal */
+  font-size: clamp(2.5rem, 6vw, 4rem); /* Valores ajustados para mais destaque */
   font-weight: 700;
   margin-bottom: 25px;
   color: #beff1b;
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 1.5px; /* Reduzido de 2px para evitar quebra feia */
+  line-height: 1.1; /* Reduzido de 1.2 para juntar mais as linhas */
 }
 
 .hero-subtitle {
-  font-size: clamp(1rem, 1.5vw + 0.5rem, 1.4rem);
-  color: #d0d0d0;
+  font-size: clamp(1rem, 1.8vw, 1.4rem);
+  color: #e0e0e0;
   margin-bottom: 40px;
   line-height: 1.8;
 }
@@ -59,20 +68,20 @@
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  padding: 20px 50px;
+  padding: clamp(14px, 2vw, 20px) clamp(30px, 5vw, 50px);
   background: linear-gradient(135deg, #25D366, #128C7E);
   color: #ffffff;
   text-decoration: none;
   font-weight: 600;
-  font-size: clamp(1rem, 1.5vw + 0.3rem, 1.2rem);
+  font-size: clamp(1rem, 1.3vw, 1.2rem);
   border-radius: 50px;
   transition: all 0.3s ease;
-  box-shadow: 0 15px 40px rgba(37, 211, 102, 0.4);
+  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
 }
 
 .hero-btn:hover {
   transform: translateY(-5px);
-  box-shadow: 0 20px 50px rgba(37, 211, 102, 0.6);
+  box-shadow: 0 20px 50px rgba(37, 211, 102, 0.5);
 }
 
 .btn-icon {
@@ -86,29 +95,30 @@
 .why-us-section {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 80px 20px;
+  padding: clamp(60px, 8vw, 100px) 20px;
 }
 
 .section-title {
-  font-size: clamp(1.8rem, 3vw + 0.8rem, 2.8rem);
+  /* MODIFICADO: Ajustes para melhor responsividade dos títulos de seção */
+  font-size: clamp(2rem, 4.5vw, 3rem); /* Valores ajustados para mais destaque */
   font-weight: 700;
   color: #beff1b;
   text-align: center;
   margin-bottom: 20px;
   text-transform: uppercase;
-  letter-spacing: auto;
- 
+  letter-spacing: 1.2px; /* Adicionado para profissionalismo, baixo para caber */
+  line-height: 1.2; /* Adicionado para controle */
 }
 
 .section-subtitle {
-  font-size: clamp(1rem, 1.5vw + 0.3rem, 1.2rem);
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
   color: #d0d0d0;
   text-align: center;
   margin-bottom: 60px;
 }
 
 .section-description {
-  font-size: clamp(1rem, 1.5vw + 0.3rem, 1.2rem);
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
   color: #e0e0e0;
   text-align: center;
   line-height: 1.9;
@@ -130,7 +140,7 @@
 
 .advantage-card {
   background: rgba(255, 255, 255, 0.05);
-  padding: 40px 30px;
+  padding: clamp(30px, 5vw, 40px);
   border-radius: 20px;
   border: 2px solid rgba(190, 255, 27, 0.2);
   text-align: center;
@@ -145,12 +155,12 @@
 }
 
 .advantage-icon {
-  font-size: clamp(3rem, 5vw, 4rem);
+  font-size: clamp(2.5rem, 4vw, 4rem);
   margin-bottom: 20px;
 }
 
 .advantage-title {
-  font-size: clamp(1.2rem, 2vw + 0.3rem, 1.5rem);
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
   font-weight: 700;
   color: #beff1b;
   margin-bottom: 15px;
@@ -180,7 +190,7 @@
   align-items: flex-start;
   gap: 30px;
   background: rgba(255, 255, 255, 0.05);
-  padding: 35px;
+  padding: clamp(25px, 4vw, 35px);
   border-radius: 20px;
   border: 2px solid rgba(190, 255, 27, 0.2);
   transition: all 0.3s ease;
@@ -193,9 +203,8 @@
 }
 
 .step-number {
-  width: 70px;
-  height: 70px;
-  flex-shrink: 0;
+  width: clamp(60px, 8vw, 70px);
+  height: clamp(60px, 8vw, 70px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -204,17 +213,14 @@
   font-size: clamp(1.5rem, 2.5vw, 2rem);
   font-weight: 700;
   color: #0a0e27;
-}
-
-.step-content {
-  flex: 1;
+  flex-shrink: 0;
 }
 
 .step-title {
-  font-size: clamp(1.2rem, 2vw + 0.3rem, 1.5rem);
+  font-size: clamp(1.1rem, 1.8vw, 1.4rem);
   font-weight: 700;
   color: #ffffff;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .step-description {
@@ -226,13 +232,13 @@
 /* ==================== POR QUE ESCOLHER ==================== */
 .why-us-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 40px;
 }
 
 .why-us-card {
   background: rgba(255, 255, 255, 0.05);
-  padding: 40px 30px;
+  padding: clamp(30px, 5vw, 40px);
   border-radius: 20px;
   border: 2px solid rgba(190, 255, 27, 0.2);
   text-align: center;
@@ -247,12 +253,12 @@
 }
 
 .why-us-icon {
-  font-size: clamp(3rem, 5vw, 4rem);
+  font-size: clamp(2.5rem, 4vw, 4rem);
   margin-bottom: 20px;
 }
 
 .why-us-title {
-  font-size: clamp(1.2rem, 2vw + 0.3rem, 1.5rem);
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
   font-weight: 700;
   color: #beff1b;
   margin-bottom: 15px;
@@ -268,19 +274,20 @@
 .cta-section {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 100px 20px;
+  padding: clamp(60px, 8vw, 120px) 20px;
   text-align: center;
 }
 
 .cta-title {
-  font-size: clamp(1.8rem, 3vw + 0.8rem, 3rem);
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
   font-weight: 700;
   color: #beff1b;
   margin-bottom: 20px;
+  line-height: 1.3;
 }
 
 .cta-subtitle {
-  font-size: clamp(1rem, 1.5vw + 0.4rem, 1.3rem);
+  font-size: clamp(1rem, 1.5vw, 1.3rem);
   color: #d0d0d0;
   margin-bottom: 40px;
   line-height: 1.7;
@@ -290,15 +297,15 @@
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  padding: 20px 50px;
+  padding: clamp(14px, 2vw, 20px) clamp(35px, 5vw, 50px);
   background: linear-gradient(135deg, #beff1b, #0ea8a8);
   color: #0a0e27;
   text-decoration: none;
   font-weight: 700;
-  font-size: clamp(1rem, 1.5vw + 0.3rem, 1.2rem);
+  font-size: clamp(1rem, 1.3vw, 1.2rem);
   border-radius: 50px;
   transition: all 0.3s ease;
-  box-shadow: 0 15px 40px rgba(190, 255, 27, 0.4);
+  box-shadow: 0 10px 30px rgba(190, 255, 27, 0.4);
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -309,20 +316,16 @@
 }
 
 /* ==================== RESPONSIVIDADE ==================== */
-@media only screen and (max-width: 992px) {
+@media (max-width: 992px) {
   .advantages-grid,
   .why-us-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media only screen and (max-width: 800px) {
-  .consorcio-page {
-    padding-top: 100px;
-  }
-
-  .hero-section {
-    padding: 80px 20px;
+@media (max-width: 768px) {
+  .hero-title {
+    line-height: 1.3;
   }
 
   .advantages-grid,
@@ -335,18 +338,27 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    transform: none !important;
   }
 }
 
-@media only screen and (max-width: 480px) {
+@media (max-width: 480px) {
   .hero-btn,
   .cta-btn {
-    padding: 15px 30px;
+    width: 100%;
+    justify-content: center;
   }
 
   .advantage-card,
   .why-us-card,
   .step-item {
     padding: 25px 20px;
+  }
+
+  /* NOVO: Ajuste específico para que os títulos principais caibam em telas muito pequenas */
+  .hero-title,
+  .section-title {
+    letter-spacing: 0.5px; /* Diminui o espaçamento para evitar quebras indesejadas */
+    word-break: break-word; /* Permite quebra de palavras se for a última alternativa */
   }
 }
