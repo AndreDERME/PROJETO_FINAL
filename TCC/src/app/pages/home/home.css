@@ -370,11 +370,11 @@ a{
 
 .section-title {
   font-size: clamp(1.8rem, 3vw + 1rem, 2.5rem);
-  font-weight: 700;
   margin-bottom: 15px;
   color: #beff1bcb;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
+  
 }
 
 .section-subtitle {
@@ -629,10 +629,18 @@ a{
 }
 
 .localizacao .section-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ gap: 15px;
+ 
+ color: #beff1b;
+ text-transform: uppercase;
+
+ /* SOLUÇÃO ANTI-QUEBRA PARA TEXTO COM ÍCONE */
+ white-space: nowrap; 
+ overflow: hidden;
+ text-overflow: ellipsis;
 }
 
 .localizacao .loc {
@@ -781,4 +789,45 @@ a{
   .cars-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+@media only screen and (max-width: 480px) {
+ .search-filters {
+  flex-direction: column;
+ }
+
+ .search-input {
+  width: 100%;
+ }
+
+ .search-btn {
+  width: 100%;
+ }
+
+ .cars-grid {
+  grid-template-columns: 1fr;
+}
+
+ .quem-somos-conteudo {
+  flex-direction: column;
+ }
+
+ .services-grid {
+  grid-template-columns: 1fr;
+ }
+
+ .footer-content {
+  grid-template-columns: 1fr;
+  text-align: center;
+ }
+
+ .footer-social {
+  justify-content: center;
+ }
+
+ .localizacao .section-title { 
+  font-size: 25px; 
+  letter-spacing: 0.5px; /* Aperta o espaçamento para caber mais na linha */
+  padding: 0 10px; /* Adiciona padding lateral para evitar corte na borda */
+  white-space: normal; /* Garante que a quebra ocorra */
+ }
 }
