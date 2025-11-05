@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home';
-import { LoginComponent } from './pages/login/login'; // ALTERADO: O nome correto do componente é LoginComponent
+
 import { Carros } from './pages/carros/carros';
 import { Contato } from './pages/contato/contato';
 import { Servicos } from './pages/servicos/servicos';
@@ -27,10 +27,6 @@ export const routes: Routes = [
 
     },
 
-        {
-        path: "login",
-        component: LoginComponent, 
-    },
 
        {
         path: "carros",
