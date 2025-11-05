@@ -1,0 +1,35 @@
+<div class="main">
+<app-header></app-header>
+
+  <main>
+    <div class="page-header">
+      <h1 class="page-title">Nosso Estoque Completo</h1>
+      <p class="page-subtitle">Encontre o veículo perfeito para você</p>
+    </div>
+
+    <div class="cars-grid">
+      
+      <div class="car-card" *ngFor="let carro of carros">
+        <div class="car-card-image">
+          <img [src]="carro.imagem" [alt]="carro.nome" />
+          <div class="car-badge">{{ carro.badge }}</div>
+        </div>
+        <div class="car-card-content">
+          <h3 class="car-name">{{ carro.nome }}</h3>
+          <div class="car-details">
+            <span class="car-year">{{ carro.ano }}</span>
+            <span class="car-separator">•</span>
+            <span class="car-km">{{ carro.km }} km</span>
+          </div>
+          <p class="car-description">{{ carro.descricao }}</p>
+          <div class="car-footer">
+            <span class="car-price">R$ {{ carro.preco }}</span>
+            <a [routerLink]="carro.link" class="car-btn">Ver Detalhes</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+</div>

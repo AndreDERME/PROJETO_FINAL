@@ -1,0 +1,364 @@
+/* ==================== RESET ==================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  
+  color: #d0d0d0;
+  overflow-x: hidden;
+}
+
+.main {
+  background: linear-gradient( #1a2456 , #0d5385 );
+  min-height: 100vh;
+}
+
+.consorcio-page {
+  padding-top: 100px;
+}
+
+/* ==================== HERO SECTION ==================== */
+.hero-section {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: clamp(60px, 8vw, 120px) 20px;
+  text-align: center;
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  /* MODIFICADO: Ajustes para melhor responsividade do título principal */
+  font-size: clamp(2.5rem, 6vw, 4rem); /* Valores ajustados para mais destaque */
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #beff1b;
+  text-transform: uppercase;
+  letter-spacing: 1.5px; /* Reduzido de 2px para evitar quebra feia */
+  line-height: 1.1; /* Reduzido de 1.2 para juntar mais as linhas */
+}
+
+.hero-subtitle {
+  font-size: clamp(1rem, 1.8vw, 1.4rem);
+  color: #e0e0e0;
+  margin-bottom: 40px;
+  line-height: 1.8;
+}
+
+.hero-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: clamp(14px, 2vw, 20px) clamp(30px, 5vw, 50px);
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: clamp(1rem, 1.3vw, 1.2rem);
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+}
+
+.hero-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px rgba(37, 211, 102, 0.5);
+}
+
+.btn-icon {
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+}
+
+/* ==================== SEÇÕES GERAIS ==================== */
+.info-section,
+.advantages-section,
+.how-it-works,
+.why-us-section {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: clamp(60px, 8vw, 100px) 20px;
+}
+
+.section-title {
+  /* MODIFICADO: Ajustes para melhor responsividade dos títulos de seção */
+  font-size: clamp(2rem, 4.5vw, 3rem); /* Valores ajustados para mais destaque */
+  font-weight: 700;
+  color: #beff1b;
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px; /* Adicionado para profissionalismo, baixo para caber */
+  line-height: 1.2; /* Adicionado para controle */
+}
+
+.section-subtitle {
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  color: #d0d0d0;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-description {
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  color: #e0e0e0;
+  text-align: center;
+  line-height: 1.9;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* ==================== INFO SECTION ==================== */
+.info-section {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* ==================== VANTAGENS ==================== */
+.advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.advantage-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: clamp(30px, 5vw, 40px);
+  border-radius: 20px;
+  border: 2px solid rgba(190, 255, 27, 0.2);
+  text-align: center;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(10px);
+}
+
+.advantage-card:hover {
+  transform: translateY(-10px);
+  border-color: #beff1b;
+  box-shadow: 0 20px 50px rgba(190, 255, 27, 0.2);
+}
+
+.advantage-icon {
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  margin-bottom: 20px;
+}
+
+.advantage-title {
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  font-weight: 700;
+  color: #beff1b;
+  margin-bottom: 15px;
+}
+
+.advantage-description {
+  font-size: clamp(0.9rem, 1.3vw, 1rem);
+  color: #d0d0d0;
+  line-height: 1.7;
+}
+
+/* ==================== COMO FUNCIONA ==================== */
+.how-it-works {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.steps-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: clamp(25px, 4vw, 35px);
+  border-radius: 20px;
+  border: 2px solid rgba(190, 255, 27, 0.2);
+  transition: all 0.3s ease;
+}
+
+.step-item:hover {
+  border-color: #beff1b;
+  box-shadow: 0 10px 30px rgba(190, 255, 27, 0.2);
+  transform: translateX(10px);
+}
+
+.step-number {
+  width: clamp(60px, 8vw, 70px);
+  height: clamp(60px, 8vw, 70px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #beff1b, #0ea8a8);
+  border-radius: 50%;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 700;
+  color: #0a0e27;
+  flex-shrink: 0;
+}
+
+.step-title {
+  font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.step-description {
+  font-size: clamp(0.9rem, 1.3vw, 1rem);
+  color: #d0d0d0;
+  line-height: 1.7;
+}
+
+/* ==================== POR QUE ESCOLHER ==================== */
+.why-us-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.why-us-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: clamp(30px, 5vw, 40px);
+  border-radius: 20px;
+  border: 2px solid rgba(190, 255, 27, 0.2);
+  text-align: center;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(10px);
+}
+
+.why-us-card:hover {
+  transform: translateY(-10px);
+  border-color: #beff1b;
+  box-shadow: 0 20px 50px rgba(190, 255, 27, 0.2);
+}
+
+.why-us-icon {
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  margin-bottom: 20px;
+}
+
+.why-us-title {
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  font-weight: 700;
+  color: #beff1b;
+  margin-bottom: 15px;
+}
+
+.why-us-description {
+  font-size: clamp(0.9rem, 1.3vw, 1rem);
+  color: #d0d0d0;
+  line-height: 1.7;
+}
+
+/* ==================== CTA FINAL ==================== */
+.cta-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: clamp(60px, 8vw, 120px) 20px;
+  text-align: center;
+}
+
+.cta-title {
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-weight: 700;
+  color: #beff1b;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.cta-subtitle {
+  font-size: clamp(1rem, 1.5vw, 1.3rem);
+  color: #d0d0d0;
+  margin-bottom: 40px;
+  line-height: 1.7;
+}
+
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: clamp(14px, 2vw, 20px) clamp(35px, 5vw, 50px);
+  background: linear-gradient(135deg, #beff1b, #0ea8a8);
+  color: #0a0e27;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: clamp(1rem, 1.3vw, 1.2rem);
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(190, 255, 27, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cta-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px rgba(190, 255, 27, 0.6);
+}
+
+/* ==================== RESPONSIVIDADE ==================== */
+@media (max-width: 992px) {
+  .advantages-grid,
+  .why-us-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    line-height: 1.3;
+  }
+
+  .advantages-grid,
+  .why-us-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .step-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transform: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-btn,
+  .cta-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .advantage-card,
+  .why-us-card,
+  .step-item {
+    padding: 25px 20px;
+  }
+
+  /* NOVO: Ajuste específico para que os títulos principais caibam em telas muito pequenas */
+  .hero-title,
+  .section-title {
+    letter-spacing: 0.5px; /* Diminui o espaçamento para evitar quebras indesejadas */
+    word-break: break-word; /* Permite quebra de palavras se for a última alternativa */
+  }
+}

@@ -1,0 +1,169 @@
+<div class="main">
+<app-header></app-header>
+
+  <main class="contact-page">
+    
+    <!-- Cabeçalho -->
+    <div class="page-header">
+      <h1 class="page-title">Entre em Contato</h1>
+      <p class="page-subtitle">Estamos prontos para atender você. Escolha a melhor forma de contato.</p>
+    </div>
+
+    <div class="contact-container">
+      
+      <!-- Lado Esquerdo - Informações -->
+      <div class="contact-info">
+        <h2 class="section-title">Informações de Contato</h2>
+        
+        <div class="info-cards">
+          <div class="info-card">
+            <div class="info-icon">📍</div>
+            <div class="info-content">
+              <h3>Endereço</h3>
+              <p>Av. Central, 123<br>Salvador, BA</p>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon">📞</div>
+            <div class="info-content">
+              <h3>Telefone</h3>
+              <p>(71) 9 9999-9999</p>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon">✉️</div>
+            <div class="info-content">
+              <h3>Email</h3>
+              <p>fordcompany.com.br</p>
+            </div>
+          </div>
+        </div>
+
+        <a href="https://wa.me/5571999999999" target="_blank" rel="noopener" class="whatsapp-btn">
+          <span class="whatsapp-icon">💬</span>
+          Falar no WhatsApp
+        </a>
+
+        <!-- Horários -->
+        <div class="schedule-box">
+          <h3>Horário de Atendimento</h3>
+          <div class="schedule-list">
+            <div class="schedule-item">
+              <span class="day">Segunda a Sexta</span>
+              <span class="time">08h - 18h</span>
+            </div>
+            <div class="schedule-item">
+              <span class="day">Sábado</span>
+              <span class="time">08h - 12h</span>
+            </div>
+            <div class="schedule-item">
+              <span class="day">Domingo e Feriados</span>
+              <span class="time">Fechado</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Missão e Valores -->
+        <div class="mission-box">
+          <h3>Nossa Missão</h3>
+          <p>Oferecer atendimento de qualidade e soluções rápidas, garantindo confiança e eficiência em cada negociação.</p>
+
+          <h3>Nossos Valores</h3>
+          <ul class="values-list">
+            <li>✅ Compromisso com o cliente</li>
+            <li>✅ Transparência total</li>
+            <li>✅ Inovação constante</li>
+            <li>✅ Excelência no atendimento</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Lado Direito - Formulário -->
+      <div class="contact-form-wrapper">
+        <h2 class="section-title">Envie sua Mensagem</h2>
+        <p class="form-description">Preencha o formulário abaixo e entraremos em contato em breve.</p>
+
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="nome" class="form-label">Nome Completo</label>
+            <input 
+              type="text" 
+              id="nome" 
+              class="form-input" 
+              placeholder="Digite seu nome completo" 
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email" class="form-label">E-mail</label>
+            <input 
+              type="email" 
+              id="email" 
+              class="form-input" 
+              placeholder="seu@email.com" 
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="telefone" class="form-label">Telefone</label>
+            <input 
+              type="tel" 
+              id="telefone" 
+              class="form-input" 
+              placeholder="(00) 00000-0000" 
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="assunto" class="form-label">Assunto</label>
+            <select id="assunto" class="form-input" required>
+              <option value="">Selecione um assunto</option>
+              <option value="duvida">Dúvida sobre veículos</option>
+              <option value="financiamento">Financiamento</option>
+              <option value="consorcio">Consórcio</option>
+              <option value="visita">Agendar visita</option>
+              <option value="outro">Outro</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="mensagem" class="form-label">Mensagem</label>
+            <textarea 
+              id="mensagem" 
+              class="form-textarea" 
+              rows="5" 
+              placeholder="Digite sua mensagem aqui..." 
+              required
+            ></textarea>
+          </div>
+
+          <!-- LGPD - Consentimento -->
+          <div class="form-group-checkbox">
+            <input 
+              type="checkbox" 
+              id="lgpd" 
+              class="form-checkbox" 
+              required
+            />
+            <label for="lgpd" class="checkbox-label">
+              Concordo com a <a routerLink="/privacidade" class="privacy-link" target="_blank">Política de Privacidade</a> e autorizo o uso dos meus dados pessoais conforme a LGPD (Lei Geral de Proteção de Dados).
+            </label>
+          </div>
+
+          <button type="submit" class="submit-btn">
+            <span class="btn-icon">📩</span>
+            Enviar Mensagem
+          </button>
+        </form>
+      </div>
+
+    </div>
+
+  </main>
+
+</div>

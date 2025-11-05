@@ -1,0 +1,63 @@
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.main {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+
+.rodape_site {
+  background: rgba(12, 149, 228, 0.822);
+  padding: 30px 20px;
+  text-align: center;
+  border-top: 2px solid #ccc;
+  font-family: Arial, sans-serif;
+  color: #fff; 
+}
+
+
+
+.redes-sociais-container {
+  display: flex;             
+  justify-content: center;   
+  align-items: center;       
+  gap: 5px;                 
+  margin-bottom: 25px;      
+}
+
+
+.redes-sociais-container .letra {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+
+.redes-sociais-container a img {
+  width: 35px; 
+  height: 35px;
+  vertical-align: middle; 
+  margin: 0 5px; 
+}
+
+
+
+.info_contato {
+ margin: 20px 0;
+ font-size: 0.95rem;
+ line-height: 1.6;
+}
+
+.info_contato p {
+ margin: 6px 0;
+}
+
+.copy {
+  font-size: 0.9rem;
+  color: #444;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 12px;
+}
